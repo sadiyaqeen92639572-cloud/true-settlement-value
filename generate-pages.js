@@ -23,6 +23,7 @@ function head({ title, description, canonicalPath, jsonLd }) {
 <title>${title}</title>
 <meta name="description" content="${description}">
 <link rel="canonical" href="${DOMAIN}${canonicalPath}">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="/assets/styles.css">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${description}">
@@ -403,6 +404,13 @@ function renderStatutePage() {
         </tbody>
       </table>
     </div>
+    <p style="font-size:0.85rem;color:var(--text-light)">Last verified ${STATUTES.lastVerified}.</p>
+  </section>
+  <section class="content-section">
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      ${STATUTES.sources.map(s => `<li><a href="${s.url}" rel="nofollow noopener" target="_blank">${s.name}</a></li>`).join('\n      ')}
+    </ul>
   </section>
 </div>`;
 
@@ -429,6 +437,30 @@ function renderStatutePage() {
   });
 }
 
+// ---------- 404 page ----------
+
+function render404Page() {
+  const bodyHtml = `<section class="hero">
+  <div class="container">
+    <h1>Page Not Found</h1>
+    <p>That page doesn't exist. Try one of the calculators below.</p>
+  </div>
+</section>
+<div class="container">
+  <section class="content-section">
+    <div class="hub-grid">
+      ${DATA.moneyPages.map(m => `<a class="hub-card" href="/${m.slug}/"><h3>${m.h1}</h3></a>`).join('\n      ')}
+    </div>
+  </section>
+</div>`;
+  return page({
+    title: `Page Not Found — ${SITE_NAME}`,
+    description: 'This page could not be found.',
+    canonicalPath: '/404.html',
+    bodyHtml
+  });
+}
+
 // ---------- write files ----------
 
 function writePage(slug, html) {
@@ -438,6 +470,7 @@ function writePage(slug, html) {
 }
 
 let count = 0;
+fs.writeFileSync(path.join(__dirname, '404.html'), render404Page(), 'utf8'); count++;
 writePage('', renderHomepage()); count++;
 writePage('methodology', renderMethodologyPage()); count++;
 writePage('about', renderAboutPage()); count++;

@@ -1,5 +1,10 @@
 {
-  "note": "General personal injury filing deadline in years from date of injury. Many states shorten this for claims against government entities, and some injury types (e.g. medical malpractice) use different rules. Verify with a licensed attorney in your state before relying on any deadline.",
+  "note": "General personal injury filing deadline in years from date of injury. Many states shorten this for claims against government entities, and some injury types (e.g. medical malpractice) use different rules. Louisiana's deadline applies to injuries on or after July 1, 2024 — injuries before that date are subject to the prior 1-year deadline. Verify with a licensed attorney in your state before relying on any deadline.",
+  "lastVerified": "2026-08-11",
+  "sources": [
+    { "name": "Nolo — Personal Injury Statute of Limitations by State", "url": "https://www.nolo.com/legal-encyclopedia/statute-of-limitations-state-laws-chart-29941.html" },
+    { "name": "FindLaw — State Civil Statute of Limitations Laws", "url": "https://www.findlaw.com/state/civil-laws.html" }
+  ],
   "states": [
     { "state": "Alabama", "years": 2 }, { "state": "Alaska", "years": 2 },
     { "state": "Arizona", "years": 2 }, { "state": "Arkansas", "years": 3 },
@@ -9,10 +14,10 @@
     { "state": "Hawaii", "years": 2 }, { "state": "Idaho", "years": 2 },
     { "state": "Illinois", "years": 2 }, { "state": "Indiana", "years": 2 },
     { "state": "Iowa", "years": 2 }, { "state": "Kansas", "years": 2 },
-    { "state": "Kentucky", "years": 1 }, { "state": "Louisiana", "years": 1 },
+    { "state": "Kentucky", "years": 1 }, { "state": "Louisiana", "years": 2 },
     { "state": "Maine", "years": 6 }, { "state": "Maryland", "years": 3 },
     { "state": "Massachusetts", "years": 3 }, { "state": "Michigan", "years": 3 },
-    { "state": "Minnesota", "years": 6 }, { "state": "Mississippi", "years": 3 },
+    { "state": "Minnesota", "years": 2 }, { "state": "Mississippi", "years": 3 },
     { "state": "Missouri", "years": 5 }, { "state": "Montana", "years": 3 },
     { "state": "Nebraska", "years": 4 }, { "state": "Nevada", "years": 2 },
     { "state": "New Hampshire", "years": 3 }, { "state": "New Jersey", "years": 2 },
