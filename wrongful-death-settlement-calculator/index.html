@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrongful Death Settlement Calculator — Free Estimate</title>
+<meta name="description" content="Estimate wrongful death damages including lost income, loss of companionship, and funeral costs.">
+<link rel="canonical" href="https://truesettlementvalue.com/wrongful-death-settlement-calculator/">
+<link rel="stylesheet" href="/assets/styles.css">
+<meta property="og:title" content="Wrongful Death Settlement Calculator — Free Estimate">
+<meta property="og:description" content="Estimate wrongful death damages including lost income, loss of companionship, and funeral costs.">
+<meta property="og:url" content="https://truesettlementvalue.com/wrongful-death-settlement-calculator/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Wrongful Death Settlement Calculator — Free Estimate","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"dateModified":"2026-08-11","author":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"},"publisher":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who can file a wrongful death claim?","acceptedAnswer":{"@type":"Answer","text":"It varies by state, but typically a surviving spouse, children, or parents, or the personal representative of the deceased's estate on behalf of those beneficiaries."}},{"@type":"Question","name":"How is lost future income calculated in a wrongful death case?","acceptedAnswer":{"@type":"Answer","text":"Based on the deceased's earning history, age, expected working years remaining, and benefits — often with input from an economist for larger claims."}},{"@type":"Question","name":"Is a wrongful death settlement taxable?","acceptedAnswer":{"@type":"Answer","text":"Compensation for physical injury or death is generally excluded from federal taxable income, though punitive damages and interest on the settlement are typically taxable."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truesettlementvalue.com/"},{"@type":"ListItem","position":2,"name":"Wrongful Death Settlement Calculator","item":"https://truesettlementvalue.com/wrongful-death-settlement-calculator/"}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">True Settlement Value</a>
+    <nav class="site-nav">
+      <a href="/#calculators">Calculators</a>
+      <a href="/statute-of-limitations-by-state/">Statutes</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+<div class="disclaimer-banner">
+  <div class="container">
+    True Settlement Value is not a law firm and does not provide legal advice. Calculator results are
+    educational estimates only, not a guarantee of any settlement value. Consult a licensed
+    attorney in your state before making legal decisions.
+  </div>
+</div>
+<section class="hero">
+  <div class="container">
+    <h1>Wrongful Death Settlement Calculator</h1>
+    <p>Wrongful death claims are brought by surviving family members or an estate representative, and damages typically include the deceased's lost future earnings, funeral and burial costs, and the family's loss of companionship, guidance, and support — categories this calculator estimates separately before combining them.</p>
+  </div>
+</section>
+<div class="container">
+  <div class="calc-card">
+    <form id="calc-form">
+      <div>
+        <label for="medicalBills">Medical bills ($)</label>
+        <input type="number" id="medicalBills" name="medicalBills" min="0" step="1" placeholder="e.g. 8000" required>
+      </div>
+      <div>
+        <label for="lostWages">Lost wages ($)</label>
+        <input type="number" id="lostWages" name="lostWages" min="0" step="1" placeholder="e.g. 2000" required>
+      </div>
+      <div>
+        <label for="severity">Injury severity</label>
+        <select id="severity" name="severity">
+          <option value="minor">Minor (full recovery, no lasting effects)</option>
+          <option value="moderate" selected>Moderate (extended treatment, some lasting effects)</option>
+          <option value="severe">Severe (permanent injury or disability)</option>
+        </select>
+      </div>
+      <div>
+        <label for="faultPercent">Your percentage of fault, if any (%)</label>
+        <input type="number" id="faultPercent" name="faultPercent" min="0" max="100" step="1" value="0">
+      </div>
+      <label class="consent-row">
+        <input type="checkbox" required>
+        <span>I understand this is an educational estimate only, not legal advice, and I've read
+        the <a href="/privacy/">privacy policy</a>.</span>
+      </label>
+      <button type="submit" class="submit-btn">Calculate estimated settlement</button>
+    </form>
+    <div class="result-block" id="calc-result" hidden>
+      <div class="result-total"></div>
+      <div class="result-row"><span>Economic damages</span><span class="result-economic"></span></div>
+      <div class="result-row"><span>Pain &amp; suffering</span><span class="result-pain"></span></div>
+      <div class="result-row result-fault-row" hidden><span>Fault reduction</span><span class="result-fault"></span></div>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <h2>How It's Calculated</h2>
+    <p>This tool uses the multiplier method: (medical bills + lost wages) &times; a pain-and-suffering
+    multiplier based on injury severity (1.5x for minor, 3x for moderate, 5x for severe), minus
+    any reduction for your percentage of fault. It's the same starting-point approach insurance
+    adjusters commonly use in negotiations — not a guaranteed outcome.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><h3>Who can file a wrongful death claim?</h3><p>It varies by state, but typically a surviving spouse, children, or parents, or the personal representative of the deceased's estate on behalf of those beneficiaries.</p></div>
+    <div class="faq-item"><h3>How is lost future income calculated in a wrongful death case?</h3><p>Based on the deceased's earning history, age, expected working years remaining, and benefits — often with input from an economist for larger claims.</p></div>
+    <div class="faq-item"><h3>Is a wrongful death settlement taxable?</h3><p>Compensation for physical injury or death is generally excluded from federal taxable income, though punitive damages and interest on the settlement are typically taxable.</p></div>
+  </section>
+
+  <section class="content-section">
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      <li><a href="https://www.justia.com/injury/wrongful-death/" rel="nofollow noopener" target="_blank">Justia — Wrongful Death Claims</a></li>
+      <li><a href="https://www.irs.gov/pub/irs-pdf/p4345.pdf" rel="nofollow noopener" target="_blank">IRS — Publication 4345, Settlements</a></li>
+    </ul>
+  </section>
+</div>
+<script src="/assets/calc-engine.js"></script>
+<script>initSettlementCalculator('calc-form', 'calc-result');</script>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/statute-of-limitations-by-state/">Statute of Limitations by State</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+    <p class="footer-disclaimer">
+      &copy; 2026 True Settlement Value. Estimates are for educational purposes only and do not
+      constitute legal advice or a guarantee of outcome. True Settlement Value is not a law firm and is
+      not affiliated with any court or government agency.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

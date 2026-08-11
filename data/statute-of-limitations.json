@@ -1,0 +1,31 @@
+{
+  "note": "General personal injury filing deadline in years from date of injury. Many states shorten this for claims against government entities, and some injury types (e.g. medical malpractice) use different rules. Verify with a licensed attorney in your state before relying on any deadline.",
+  "states": [
+    { "state": "Alabama", "years": 2 }, { "state": "Alaska", "years": 2 },
+    { "state": "Arizona", "years": 2 }, { "state": "Arkansas", "years": 3 },
+    { "state": "California", "years": 2 }, { "state": "Colorado", "years": 2 },
+    { "state": "Connecticut", "years": 2 }, { "state": "Delaware", "years": 2 },
+    { "state": "Florida", "years": 2 }, { "state": "Georgia", "years": 2 },
+    { "state": "Hawaii", "years": 2 }, { "state": "Idaho", "years": 2 },
+    { "state": "Illinois", "years": 2 }, { "state": "Indiana", "years": 2 },
+    { "state": "Iowa", "years": 2 }, { "state": "Kansas", "years": 2 },
+    { "state": "Kentucky", "years": 1 }, { "state": "Louisiana", "years": 1 },
+    { "state": "Maine", "years": 6 }, { "state": "Maryland", "years": 3 },
+    { "state": "Massachusetts", "years": 3 }, { "state": "Michigan", "years": 3 },
+    { "state": "Minnesota", "years": 6 }, { "state": "Mississippi", "years": 3 },
+    { "state": "Missouri", "years": 5 }, { "state": "Montana", "years": 3 },
+    { "state": "Nebraska", "years": 4 }, { "state": "Nevada", "years": 2 },
+    { "state": "New Hampshire", "years": 3 }, { "state": "New Jersey", "years": 2 },
+    { "state": "New Mexico", "years": 3 }, { "state": "New York", "years": 3 },
+    { "state": "North Carolina", "years": 3 }, { "state": "North Dakota", "years": 6 },
+    { "state": "Ohio", "years": 2 }, { "state": "Oklahoma", "years": 2 },
+    { "state": "Oregon", "years": 2 }, { "state": "Pennsylvania", "years": 2 },
+    { "state": "Rhode Island", "years": 3 }, { "state": "South Carolina", "years": 3 },
+    { "state": "South Dakota", "years": 3 }, { "state": "Tennessee", "years": 1 },
+    { "state": "Texas", "years": 2 }, { "state": "Utah", "years": 4 },
+    { "state": "Vermont", "years": 3 }, { "state": "Virginia", "years": 2 },
+    { "state": "Washington", "years": 3 }, { "state": "West Virginia", "years": 2 },
+    { "state": "Wisconsin", "years": 3 }, { "state": "Wyoming", "years": 4 },
+    { "state": "District of Columbia", "years": 3 }
+  ]
+}

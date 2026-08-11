@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lawsuit Settlement Calculator — Free Estimate</title>
+<meta name="description" content="Estimate a civil lawsuit settlement value covering economic damages plus pain and suffering.">
+<link rel="canonical" href="https://truesettlementvalue.com/lawsuit-settlement-calculator/">
+<link rel="stylesheet" href="/assets/styles.css">
+<meta property="og:title" content="Lawsuit Settlement Calculator — Free Estimate">
+<meta property="og:description" content="Estimate a civil lawsuit settlement value covering economic damages plus pain and suffering.">
+<meta property="og:url" content="https://truesettlementvalue.com/lawsuit-settlement-calculator/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Lawsuit Settlement Calculator — Free Estimate","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"dateModified":"2026-08-11","author":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"},"publisher":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between a settlement and a judgment?","acceptedAnswer":{"@type":"Answer","text":"A settlement is a negotiated agreement, usually reached before or during trial, with no admission of fault required. A judgment is a court's formal ruling after trial, which can be appealed."}},{"@type":"Question","name":"How long does a lawsuit take to settle?","acceptedAnswer":{"@type":"Answer","text":"Anywhere from a few months to several years, depending on injury severity, whether liability is disputed, and how many parties are involved."}},{"@type":"Question","name":"Do most lawsuits settle before trial?","acceptedAnswer":{"@type":"Answer","text":"Yes — the large majority of civil lawsuits, including personal injury cases, settle before reaching trial."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truesettlementvalue.com/"},{"@type":"ListItem","position":2,"name":"Lawsuit Settlement Calculator","item":"https://truesettlementvalue.com/lawsuit-settlement-calculator/"}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">True Settlement Value</a>
+    <nav class="site-nav">
+      <a href="/#calculators">Calculators</a>
+      <a href="/statute-of-limitations-by-state/">Statutes</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+<div class="disclaimer-banner">
+  <div class="container">
+    True Settlement Value is not a law firm and does not provide legal advice. Calculator results are
+    educational estimates only, not a guarantee of any settlement value. Consult a licensed
+    attorney in your state before making legal decisions.
+  </div>
+</div>
+<section class="hero">
+  <div class="container">
+    <h1>Lawsuit Settlement Calculator</h1>
+    <p>This general-purpose calculator applies the multiplier method used across most civil injury lawsuits, combining your documented economic losses with an estimated non-economic damages figure based on injury severity.</p>
+  </div>
+</section>
+<div class="container">
+  <div class="calc-card">
+    <form id="calc-form">
+      <div>
+        <label for="medicalBills">Medical bills ($)</label>
+        <input type="number" id="medicalBills" name="medicalBills" min="0" step="1" placeholder="e.g. 8000" required>
+      </div>
+      <div>
+        <label for="lostWages">Lost wages ($)</label>
+        <input type="number" id="lostWages" name="lostWages" min="0" step="1" placeholder="e.g. 2000" required>
+      </div>
+      <div>
+        <label for="severity">Injury severity</label>
+        <select id="severity" name="severity">
+          <option value="minor">Minor (full recovery, no lasting effects)</option>
+          <option value="moderate" selected>Moderate (extended treatment, some lasting effects)</option>
+          <option value="severe">Severe (permanent injury or disability)</option>
+        </select>
+      </div>
+      <div>
+        <label for="faultPercent">Your percentage of fault, if any (%)</label>
+        <input type="number" id="faultPercent" name="faultPercent" min="0" max="100" step="1" value="0">
+      </div>
+      <label class="consent-row">
+        <input type="checkbox" required>
+        <span>I understand this is an educational estimate only, not legal advice, and I've read
+        the <a href="/privacy/">privacy policy</a>.</span>
+      </label>
+      <button type="submit" class="submit-btn">Calculate estimated settlement</button>
+    </form>
+    <div class="result-block" id="calc-result" hidden>
+      <div class="result-total"></div>
+      <div class="result-row"><span>Economic damages</span><span class="result-economic"></span></div>
+      <div class="result-row"><span>Pain &amp; suffering</span><span class="result-pain"></span></div>
+      <div class="result-row result-fault-row" hidden><span>Fault reduction</span><span class="result-fault"></span></div>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <h2>How It's Calculated</h2>
+    <p>This tool uses the multiplier method: (medical bills + lost wages) &times; a pain-and-suffering
+    multiplier based on injury severity (1.5x for minor, 3x for moderate, 5x for severe), minus
+    any reduction for your percentage of fault. It's the same starting-point approach insurance
+    adjusters commonly use in negotiations — not a guaranteed outcome.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><h3>What's the difference between a settlement and a judgment?</h3><p>A settlement is a negotiated agreement, usually reached before or during trial, with no admission of fault required. A judgment is a court's formal ruling after trial, which can be appealed.</p></div>
+    <div class="faq-item"><h3>How long does a lawsuit take to settle?</h3><p>Anywhere from a few months to several years, depending on injury severity, whether liability is disputed, and how many parties are involved.</p></div>
+    <div class="faq-item"><h3>Do most lawsuits settle before trial?</h3><p>Yes — the large majority of civil lawsuits, including personal injury cases, settle before reaching trial.</p></div>
+  </section>
+
+  <section class="content-section">
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      <li><a href="https://www.uscourts.gov/court-programs/federal-courts-and-you/types-cases/civil-cases" rel="nofollow noopener" target="_blank">U.S. Courts — Civil Cases</a></li>
+      <li><a href="https://www.justia.com" rel="nofollow noopener" target="_blank">Justia — Civil Litigation</a></li>
+    </ul>
+  </section>
+</div>
+<script src="/assets/calc-engine.js"></script>
+<script>initSettlementCalculator('calc-form', 'calc-result');</script>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/statute-of-limitations-by-state/">Statute of Limitations by State</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+    <p class="footer-disclaimer">
+      &copy; 2026 True Settlement Value. Estimates are for educational purposes only and do not
+      constitute legal advice or a guarantee of outcome. True Settlement Value is not a law firm and is
+      not affiliated with any court or government agency.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

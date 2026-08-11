@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dog Bite Settlement Calculator — Free Estimate</title>
+<meta name="description" content="Estimate your dog bite claim value based on medical bills, scarring, and pain and suffering.">
+<link rel="canonical" href="https://truesettlementvalue.com/dog-bite-settlement-calculator/">
+<link rel="stylesheet" href="/assets/styles.css">
+<meta property="og:title" content="Dog Bite Settlement Calculator — Free Estimate">
+<meta property="og:description" content="Estimate your dog bite claim value based on medical bills, scarring, and pain and suffering.">
+<meta property="og:url" content="https://truesettlementvalue.com/dog-bite-settlement-calculator/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Dog Bite Settlement Calculator — Free Estimate","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"dateModified":"2026-08-11","author":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"},"publisher":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the dog owner automatically liable for a bite?","acceptedAnswer":{"@type":"Answer","text":"It depends on the state. Many states have strict liability laws holding owners responsible regardless of the dog's prior behavior; others follow a 'one bite rule' requiring proof the owner knew the dog was dangerous."}},{"@type":"Question","name":"Does scarring increase a dog bite settlement?","acceptedAnswer":{"@type":"Answer","text":"Yes, significantly. Visible or permanent scarring, especially on the face or hands, typically pushes the pain-and-suffering multiplier toward the higher end of the range."}},{"@type":"Question","name":"What if the dog owner has no insurance?","acceptedAnswer":{"@type":"Answer","text":"You may need to pursue the owner's personal assets directly, or in some cases file a claim under your own umbrella or renters/homeowners policy if applicable."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truesettlementvalue.com/"},{"@type":"ListItem","position":2,"name":"Dog Bite Settlement Calculator","item":"https://truesettlementvalue.com/dog-bite-settlement-calculator/"}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">True Settlement Value</a>
+    <nav class="site-nav">
+      <a href="/#calculators">Calculators</a>
+      <a href="/statute-of-limitations-by-state/">Statutes</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+<div class="disclaimer-banner">
+  <div class="container">
+    True Settlement Value is not a law firm and does not provide legal advice. Calculator results are
+    educational estimates only, not a guarantee of any settlement value. Consult a licensed
+    attorney in your state before making legal decisions.
+  </div>
+</div>
+<section class="hero">
+  <div class="container">
+    <h1>Dog Bite Settlement Calculator</h1>
+    <p>Dog bite claims usually settle through the owner's homeowners or renters insurance. Severity (puncture wounds, scarring, nerve damage, infection risk) drives the pain-and-suffering multiplier more than in most other injury types because bites often leave visible, permanent marks.</p>
+  </div>
+</section>
+<div class="container">
+  <div class="calc-card">
+    <form id="calc-form">
+      <div>
+        <label for="medicalBills">Medical bills ($)</label>
+        <input type="number" id="medicalBills" name="medicalBills" min="0" step="1" placeholder="e.g. 8000" required>
+      </div>
+      <div>
+        <label for="lostWages">Lost wages ($)</label>
+        <input type="number" id="lostWages" name="lostWages" min="0" step="1" placeholder="e.g. 2000" required>
+      </div>
+      <div>
+        <label for="severity">Injury severity</label>
+        <select id="severity" name="severity">
+          <option value="minor">Minor (full recovery, no lasting effects)</option>
+          <option value="moderate" selected>Moderate (extended treatment, some lasting effects)</option>
+          <option value="severe">Severe (permanent injury or disability)</option>
+        </select>
+      </div>
+      <div>
+        <label for="faultPercent">Your percentage of fault, if any (%)</label>
+        <input type="number" id="faultPercent" name="faultPercent" min="0" max="100" step="1" value="0">
+      </div>
+      <label class="consent-row">
+        <input type="checkbox" required>
+        <span>I understand this is an educational estimate only, not legal advice, and I've read
+        the <a href="/privacy/">privacy policy</a>.</span>
+      </label>
+      <button type="submit" class="submit-btn">Calculate estimated settlement</button>
+    </form>
+    <div class="result-block" id="calc-result" hidden>
+      <div class="result-total"></div>
+      <div class="result-row"><span>Economic damages</span><span class="result-economic"></span></div>
+      <div class="result-row"><span>Pain &amp; suffering</span><span class="result-pain"></span></div>
+      <div class="result-row result-fault-row" hidden><span>Fault reduction</span><span class="result-fault"></span></div>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <h2>How It's Calculated</h2>
+    <p>This tool uses the multiplier method: (medical bills + lost wages) &times; a pain-and-suffering
+    multiplier based on injury severity (1.5x for minor, 3x for moderate, 5x for severe), minus
+    any reduction for your percentage of fault. It's the same starting-point approach insurance
+    adjusters commonly use in negotiations — not a guaranteed outcome.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><h3>Is the dog owner automatically liable for a bite?</h3><p>It depends on the state. Many states have strict liability laws holding owners responsible regardless of the dog's prior behavior; others follow a 'one bite rule' requiring proof the owner knew the dog was dangerous.</p></div>
+    <div class="faq-item"><h3>Does scarring increase a dog bite settlement?</h3><p>Yes, significantly. Visible or permanent scarring, especially on the face or hands, typically pushes the pain-and-suffering multiplier toward the higher end of the range.</p></div>
+    <div class="faq-item"><h3>What if the dog owner has no insurance?</h3><p>You may need to pursue the owner's personal assets directly, or in some cases file a claim under your own umbrella or renters/homeowners policy if applicable.</p></div>
+  </section>
+
+  <section class="content-section">
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      <li><a href="https://www.cdc.gov/dog-bites/index.html" rel="nofollow noopener" target="_blank">CDC — Dog Bite Prevention</a></li>
+      <li><a href="https://www.nolo.com/legal-encyclopedia/dog-bite-injury-claims" rel="nofollow noopener" target="_blank">Nolo — Dog Bite Injury Claims</a></li>
+    </ul>
+  </section>
+</div>
+<script src="/assets/calc-engine.js"></script>
+<script>initSettlementCalculator('calc-form', 'calc-result');</script>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/statute-of-limitations-by-state/">Statute of Limitations by State</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+    <p class="footer-disclaimer">
+      &copy; 2026 True Settlement Value. Estimates are for educational purposes only and do not
+      constitute legal advice or a guarantee of outcome. True Settlement Value is not a law firm and is
+      not affiliated with any court or government agency.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
