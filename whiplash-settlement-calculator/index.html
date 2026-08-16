@@ -63,6 +63,63 @@
         <label for="faultPercent">Your percentage of fault, if any (%)</label>
         <input type="number" id="faultPercent" name="faultPercent" min="0" max="100" step="1" value="0">
       </div>
+      <div>
+        <label for="state">State (optional — enables state-specific fault rules and caps)</label>
+        <select id="state" name="state">
+          <option value="">Select a state (optional)</option>
+          <option value="Alabama">Alabama</option>
+          <option value="Alaska">Alaska</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Arkansas">Arkansas</option>
+          <option value="California">California</option>
+          <option value="Colorado">Colorado</option>
+          <option value="Connecticut">Connecticut</option>
+          <option value="Delaware">Delaware</option>
+          <option value="District of Columbia">District of Columbia</option>
+          <option value="Florida">Florida</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Idaho">Idaho</option>
+          <option value="Illinois">Illinois</option>
+          <option value="Indiana">Indiana</option>
+          <option value="Iowa">Iowa</option>
+          <option value="Kansas">Kansas</option>
+          <option value="Kentucky">Kentucky</option>
+          <option value="Louisiana">Louisiana</option>
+          <option value="Maine">Maine</option>
+          <option value="Maryland">Maryland</option>
+          <option value="Massachusetts">Massachusetts</option>
+          <option value="Michigan">Michigan</option>
+          <option value="Minnesota">Minnesota</option>
+          <option value="Mississippi">Mississippi</option>
+          <option value="Missouri">Missouri</option>
+          <option value="Montana">Montana</option>
+          <option value="Nebraska">Nebraska</option>
+          <option value="Nevada">Nevada</option>
+          <option value="New Hampshire">New Hampshire</option>
+          <option value="New Jersey">New Jersey</option>
+          <option value="New Mexico">New Mexico</option>
+          <option value="New York">New York</option>
+          <option value="North Carolina">North Carolina</option>
+          <option value="North Dakota">North Dakota</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Oklahoma">Oklahoma</option>
+          <option value="Oregon">Oregon</option>
+          <option value="Pennsylvania">Pennsylvania</option>
+          <option value="Rhode Island">Rhode Island</option>
+          <option value="South Carolina">South Carolina</option>
+          <option value="South Dakota">South Dakota</option>
+          <option value="Tennessee">Tennessee</option>
+          <option value="Texas">Texas</option>
+          <option value="Utah">Utah</option>
+          <option value="Vermont">Vermont</option>
+          <option value="Virginia">Virginia</option>
+          <option value="Washington">Washington</option>
+          <option value="West Virginia">West Virginia</option>
+          <option value="Wisconsin">Wisconsin</option>
+          <option value="Wyoming">Wyoming</option>
+        </select>
+      </div>
       <label class="consent-row">
         <input type="checkbox" required>
         <span>I understand this is an educational estimate only, not legal advice, and I've read
@@ -84,6 +141,12 @@
     multiplier based on injury severity (1.5x for minor, 3x for moderate, 5x for severe), minus
     any reduction for your percentage of fault. It's the same starting-point approach insurance
     adjusters commonly use in negotiations — not a guaranteed outcome.</p>
+    <p>If you select a state, this tool applies that state's actual comparative/contributory
+    negligence rule and, where researched, its noneconomic-damages cap for this claim type — see
+    the <a href="/methodology/">methodology page</a> for exactly which states and rules are
+    currently covered. If your state's rule bars recovery at your entered fault percentage, this
+    tool shows an explanation instead of a dollar amount — that percentage is your own estimate,
+    not a legal finding, and several of these rules have real exceptions.</p>
   </section>
 
   <section class="content-section">
@@ -101,8 +164,9 @@
     </ul>
   </section>
 </div>
+<script src="/assets/state-data.js"></script>
 <script src="/assets/calc-engine.js"></script>
-<script>initSettlementCalculator('calc-form', 'calc-result');</script>
+<script>initSettlementCalculator('calc-form', 'calc-result', 'whiplash-settlement-calculator');</script>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-links">

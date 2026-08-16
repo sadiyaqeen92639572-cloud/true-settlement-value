@@ -55,15 +55,31 @@
         </tbody>
       </table>
     </div>
-    <h2>What this tool does not do</h2>
-    <p>It does not account for policy limits, disputed liability, jurisdiction-specific damage
-    caps (e.g. medical malpractice caps, which vary by state), or the strength of your evidence
-    — all of which materially affect real settlements. Treat the result as a starting point for
-    your own research, not a number to expect from an insurer.</p>
+    <h2>State-specific rules (comparative/contributory negligence and damage caps)</h2>
+    <p>If you select a state, the calculator applies that state's actual fault-bar rule — pure
+    comparative, modified comparative (with that state's own 50% or 51% threshold), pure
+    contributory negligence, or (for South Dakota specifically) a note that its slight/gross rule
+    doesn't reduce to an automatic calculation. All 50 states plus D.C. are covered for this part,
+    each sourced to two independent references (see <code>data/comparative-negligence.json</code>
+    in the site's public repository for the full list and citations).</p>
+    <p>Where a fault percentage would bar recovery under a state's rule, this tool shows an
+    explanation instead of a dollar figure — the entered fault percentage is a self-reported
+    estimate, not a judge or jury's finding, and several of these rules carry real exceptions
+    this tool doesn't attempt to evaluate.</p>
+    <p><strong>Damage caps are currently researched for a starting set of states only</strong> —
+    California, Texas, North Carolina, Florida, Georgia, and Illinois — not all states that may
+    have one. A missing entry for a state means "not yet researched," not "confirmed no cap."
+    Coverage will expand over time; check with a local attorney for any state not yet listed.</p>
+    <h2>What this tool still does not do</h2>
+    <p>It does not account for insurance policy limits, disputed liability, or the strength of
+    your evidence — all of which materially affect real settlements regardless of which state
+    rules apply. Treat the result as a starting point for your own research, not a number to
+    expect from an insurer.</p>
     <h2>Sources</h2>
     <p>Each calculator page cites its own sources. General references used across this site
-    include the Insurance Information Institute, Nolo's legal encyclopedia, the U.S. Department
-    of Labor, and the National Conference of State Legislatures.</p>
+    include the Insurance Information Institute, Nolo/AllLaw's legal encyclopedia, the American
+    Medical Association's state medical liability reform tracking, the American Tort Reform
+    Association, and the National Conference of State Legislatures.</p>
   </section>
 </div>
 <footer class="site-footer">

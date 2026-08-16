@@ -13,7 +13,7 @@
         },
         {
           "q": "Does fault percentage affect my settlement?",
-          "a": "Yes. Most states apply comparative negligence, reducing your recovery by your percentage of fault. A few states bar recovery entirely if you're 50% or more at fault."
+          "a": "Yes, and the exact effect depends on your state. Most states apply comparative negligence, reducing recovery proportionally by your fault percentage — some bar recovery entirely once fault crosses a threshold (typically 50% or 51%, and the exact cutoff varies by state). A handful of states (Alabama, Maryland, North Carolina, Virginia, D.C.) use pure contributory negligence, where any fault at all can bar recovery, though real exceptions exist there too. Select your state above for the specific rule that applies — fault percentage is ultimately determined by a judge or jury, not by this estimate."
         },
         {
           "q": "How long after a car accident can I file a claim?",

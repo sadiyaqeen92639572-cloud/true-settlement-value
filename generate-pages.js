@@ -8,6 +8,10 @@ const TODAY = new Date().toISOString().split('T')[0];
 
 const DATA = require('./data/calculators.json');
 const STATUTES = require('./data/statute-of-limitations.json');
+const NEGLIGENCE = require('./data/comparative-negligence.json');
+const DAMAGE_CAPS = require('./data/damage-caps.json');
+
+const US_STATES = NEGLIGENCE.states.map(s => s.state).sort();
 
 const ORG = {
   '@type': 'Organization',
@@ -160,6 +164,13 @@ function renderMoneyPage(entry) {
         <label for="faultPercent">Your percentage of fault, if any (%)</label>
         <input type="number" id="faultPercent" name="faultPercent" min="0" max="100" step="1" value="0">
       </div>
+      <div>
+        <label for="state">State (optional — enables state-specific fault rules and caps)</label>
+        <select id="state" name="state">
+          <option value="">Select a state (optional)</option>
+          ${US_STATES.map(s => `<option value="${s}">${s}</option>`).join('\n          ')}
+        </select>
+      </div>
       <label class="consent-row">
         <input type="checkbox" required>
         <span>I understand this is an educational estimate only, not legal advice, and I've read
@@ -181,6 +192,12 @@ function renderMoneyPage(entry) {
     multiplier based on injury severity (1.5x for minor, 3x for moderate, 5x for severe), minus
     any reduction for your percentage of fault. It's the same starting-point approach insurance
     adjusters commonly use in negotiations — not a guaranteed outcome.</p>
+    <p>If you select a state, this tool applies that state's actual comparative/contributory
+    negligence rule and, where researched, its noneconomic-damages cap for this claim type — see
+    the <a href="/methodology/">methodology page</a> for exactly which states and rules are
+    currently covered. If your state's rule bars recovery at your entered fault percentage, this
+    tool shows an explanation instead of a dollar amount — that percentage is your own estimate,
+    not a legal finding, and several of these rules have real exceptions.</p>
   </section>
 
   <section class="content-section">
@@ -195,8 +212,9 @@ function renderMoneyPage(entry) {
     </ul>
   </section>
 </div>
+<script src="/assets/state-data.js"></script>
 <script src="/assets/calc-engine.js"></script>
-<script>initSettlementCalculator('calc-form', 'calc-result');</script>`;
+<script>initSettlementCalculator('calc-form', 'calc-result', '${entry.slug}');</script>`;
 
   return page({
     title: entry.title,
@@ -325,15 +343,31 @@ function renderMethodologyPage() {
         </tbody>
       </table>
     </div>
-    <h2>What this tool does not do</h2>
-    <p>It does not account for policy limits, disputed liability, jurisdiction-specific damage
-    caps (e.g. medical malpractice caps, which vary by state), or the strength of your evidence
-    — all of which materially affect real settlements. Treat the result as a starting point for
-    your own research, not a number to expect from an insurer.</p>
+    <h2>State-specific rules (comparative/contributory negligence and damage caps)</h2>
+    <p>If you select a state, the calculator applies that state's actual fault-bar rule — pure
+    comparative, modified comparative (with that state's own 50% or 51% threshold), pure
+    contributory negligence, or (for South Dakota specifically) a note that its slight/gross rule
+    doesn't reduce to an automatic calculation. All 50 states plus D.C. are covered for this part,
+    each sourced to two independent references (see <code>data/comparative-negligence.json</code>
+    in the site's public repository for the full list and citations).</p>
+    <p>Where a fault percentage would bar recovery under a state's rule, this tool shows an
+    explanation instead of a dollar figure — the entered fault percentage is a self-reported
+    estimate, not a judge or jury's finding, and several of these rules carry real exceptions
+    this tool doesn't attempt to evaluate.</p>
+    <p><strong>Damage caps are currently researched for a starting set of states only</strong> —
+    California, Texas, North Carolina, Florida, Georgia, and Illinois — not all states that may
+    have one. A missing entry for a state means "not yet researched," not "confirmed no cap."
+    Coverage will expand over time; check with a local attorney for any state not yet listed.</p>
+    <h2>What this tool still does not do</h2>
+    <p>It does not account for insurance policy limits, disputed liability, or the strength of
+    your evidence — all of which materially affect real settlements regardless of which state
+    rules apply. Treat the result as a starting point for your own research, not a number to
+    expect from an insurer.</p>
     <h2>Sources</h2>
     <p>Each calculator page cites its own sources. General references used across this site
-    include the Insurance Information Institute, Nolo's legal encyclopedia, the U.S. Department
-    of Labor, and the National Conference of State Legislatures.</p>
+    include the Insurance Information Institute, Nolo/AllLaw's legal encyclopedia, the American
+    Medical Association's state medical liability reform tracking, the American Tort Reform
+    Association, and the National Conference of State Legislatures.</p>
   </section>
 </div>`;
   return page({
@@ -491,4 +525,11 @@ DATA.infoPages.forEach(entry => { writePage(entry.slug, renderInfoPage(entry)); 
 fs.writeFileSync(path.join(__dirname, 'robots.txt'),
   `User-agent: *\nAllow: /\nSitemap: ${DOMAIN}/sitemap.xml\n`, 'utf8');
 
-console.log(`Generated ${count} pages + robots.txt`);
+// state-data.js — regenerated from data/comparative-negligence.json + data/damage-caps.json
+// on every run, so those JSON files stay the single source of truth (never hand-edit this file).
+fs.writeFileSync(path.join(__dirname, 'assets', 'state-data.js'),
+  `// Generated by generate-pages.js from data/comparative-negligence.json + data/damage-caps.json — do not hand-edit.\n` +
+  `window.STATE_DATA = ${JSON.stringify({ comparativeNegligence: NEGLIGENCE.states, damageCaps: DAMAGE_CAPS.caps })};\n`,
+  'utf8');
+
+console.log(`Generated ${count} pages + robots.txt + assets/state-data.js`);
