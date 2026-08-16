@@ -7,13 +7,28 @@
       "h1": "Car Accident Settlement Calculator",
       "intro": "Car accident claims combine two kinds of damages: your actual out-of-pocket losses (medical bills, lost wages, vehicle repair) and compensation for pain and suffering. Insurance adjusters typically use the multiplier method below as a starting point in negotiations — enter your numbers to see how it works.",
       "faq": [
-        { "q": "How accurate is a car accident settlement calculator?", "a": "It gives a starting-point estimate using the same multiplier method insurance adjusters use, not a guaranteed outcome. Actual settlements depend on liability, insurance policy limits, and negotiation." },
-        { "q": "Does fault percentage affect my settlement?", "a": "Yes. Most states apply comparative negligence, reducing your recovery by your percentage of fault. A few states bar recovery entirely if you're 50% or more at fault." },
-        { "q": "How long after a car accident can I file a claim?", "a": "Every state sets a statute of limitations for personal injury claims, typically 1 to 6 years from the accident date. Check your state's deadline — missing it usually bars the claim permanently." }
+        {
+          "q": "How accurate is a car accident settlement calculator?",
+          "a": "It gives a starting-point estimate using the same multiplier method insurance adjusters use, not a guaranteed outcome. Actual settlements depend on liability, insurance policy limits, and negotiation."
+        },
+        {
+          "q": "Does fault percentage affect my settlement?",
+          "a": "Yes. Most states apply comparative negligence, reducing your recovery by your percentage of fault. A few states bar recovery entirely if you're 50% or more at fault."
+        },
+        {
+          "q": "How long after a car accident can I file a claim?",
+          "a": "Every state sets a statute of limitations for personal injury claims, typically 1 to 6 years from the accident date. Check your state's deadline — missing it usually bars the claim permanently."
+        }
       ],
       "sources": [
-        { "name": "Insurance Information Institute — Auto Insurance Basics", "url": "https://www.iii.org/article/auto-insurance-basics" },
-        { "name": "Nolo — Car Accident Claims", "url": "https://www.nolo.com/legal-encyclopedia/car-accidents" }
+        {
+          "name": "Insurance Information Institute — Auto Insurance Basics",
+          "url": "https://www.iii.org/article/auto-insurance-basics"
+        },
+        {
+          "name": "Nolo — Car Accident Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/car-accidents"
+        }
       ]
     },
     {
@@ -23,13 +38,28 @@
       "h1": "Personal Injury Settlement Calculator",
       "intro": "Personal injury settlements generally cover two categories: economic damages (medical bills, lost income, property damage) and non-economic damages (pain and suffering). This calculator applies the multiplier method — the same approach insurance adjusters use as a negotiation starting point — to any type of injury claim.",
       "faq": [
-        { "q": "What counts as economic damages in a personal injury claim?", "a": "Medical bills (past and future), lost wages, lost earning capacity, and property damage — losses with a specific dollar figure attached." },
-        { "q": "What's the difference between economic and non-economic damages?", "a": "Economic damages have a receipt or pay stub behind them. Non-economic damages (pain and suffering, emotional distress, loss of enjoyment of life) don't — they're estimated using methods like the multiplier." },
-        { "q": "Do I need a lawyer to negotiate a personal injury settlement?", "a": "Not always for minor claims, but insurers typically offer less to unrepresented claimants. For serious injuries or disputed liability, legal representation usually improves outcomes." }
+        {
+          "q": "What counts as economic damages in a personal injury claim?",
+          "a": "Medical bills (past and future), lost wages, lost earning capacity, and property damage — losses with a specific dollar figure attached."
+        },
+        {
+          "q": "What's the difference between economic and non-economic damages?",
+          "a": "Economic damages have a receipt or pay stub behind them. Non-economic damages (pain and suffering, emotional distress, loss of enjoyment of life) don't — they're estimated using methods like the multiplier."
+        },
+        {
+          "q": "Do I need a lawyer to negotiate a personal injury settlement?",
+          "a": "Not always for minor claims, but insurers typically offer less to unrepresented claimants. For serious injuries or disputed liability, legal representation usually improves outcomes."
+        }
       ],
       "sources": [
-        { "name": "American Bar Association — Personal Injury Basics", "url": "https://www.americanbar.org" },
-        { "name": "Justia — Personal Injury Law Center", "url": "https://www.justia.com/injury/" }
+        {
+          "name": "American Bar Association — Personal Injury Basics",
+          "url": "https://www.americanbar.org"
+        },
+        {
+          "name": "Justia — Personal Injury Law Center",
+          "url": "https://www.justia.com/injury/"
+        }
       ]
     },
     {
@@ -39,13 +69,28 @@
       "h1": "Pain and Suffering Calculator",
       "intro": "Pain and suffering has no receipt — it's estimated. The multiplier method takes your total medical bills and lost wages and multiplies that figure by a number reflecting injury severity, typically between 1.5 and 5. This tool walks through that math step by step.",
       "faq": [
-        { "q": "How is pain and suffering calculated?", "a": "The most common approach, the multiplier method, adds your medical expenses and lost wages, then multiplies the total by a severity factor (usually 1.5 to 5). A less common alternative, the per diem method, assigns a daily dollar value to your recovery period." },
-        { "q": "What determines the multiplier used?", "a": "Injury severity and permanence, recovery time, impact on daily life, and whether the injury is documented by objective medical evidence (imaging, surgery records) versus subjective complaints." },
-        { "q": "Is pain and suffering taxable?", "a": "Generally no — compensation for physical injury or sickness, including the pain and suffering portion, is excluded from federal taxable income under IRC Section 104(a)(2), with some exceptions for punitive damages." }
+        {
+          "q": "How is pain and suffering calculated?",
+          "a": "The most common approach, the multiplier method, adds your medical expenses and lost wages, then multiplies the total by a severity factor (usually 1.5 to 5). A less common alternative, the per diem method, assigns a daily dollar value to your recovery period."
+        },
+        {
+          "q": "What determines the multiplier used?",
+          "a": "Injury severity and permanence, recovery time, impact on daily life, and whether the injury is documented by objective medical evidence (imaging, surgery records) versus subjective complaints."
+        },
+        {
+          "q": "Is pain and suffering taxable?",
+          "a": "Generally no — compensation for physical injury or sickness, including the pain and suffering portion, is excluded from federal taxable income under IRC Section 104(a)(2), with some exceptions for punitive damages."
+        }
       ],
       "sources": [
-        { "name": "IRS — Publication 4345, Settlements", "url": "https://www.irs.gov/pub/irs-pdf/p4345.pdf" },
-        { "name": "Nolo — Pain and Suffering Damages", "url": "https://www.nolo.com/legal-encyclopedia/pain-suffering-personal-injury-claims" }
+        {
+          "name": "IRS — Publication 4345, Settlements",
+          "url": "https://www.irs.gov/pub/irs-pdf/p4345.pdf"
+        },
+        {
+          "name": "Nolo — Pain and Suffering Damages",
+          "url": "https://www.nolo.com/legal-encyclopedia/pain-suffering-personal-injury-claims"
+        }
       ]
     },
     {
@@ -55,13 +100,28 @@
       "h1": "Workers' Comp Settlement Calculator",
       "intro": "Workers' compensation settlements work differently from injury lawsuits — they're typically no-fault, but pain and suffering usually isn't recoverable in the same way. This calculator estimates a settlement range based on medical costs, lost wages, and disability severity.",
       "faq": [
-        { "q": "Can I sue my employer instead of filing workers' comp?", "a": "In most states, workers' comp is the exclusive remedy against your employer, meaning you generally can't also sue them for negligence. Exceptions exist for intentional harm or third-party liability (e.g., a defective machine made by another company)." },
-        { "q": "Does workers' comp cover pain and suffering?", "a": "Generally no. Workers' comp covers medical treatment and a portion of lost wages, plus disability payments, but not pain and suffering the way a personal injury lawsuit would." },
-        { "q": "How is a workers' comp settlement calculated?", "a": "It's typically based on your average weekly wage, the state's compensation rate (often around two-thirds of wages), and your disability rating (percentage of impairment) as determined by a medical evaluation." }
+        {
+          "q": "Can I sue my employer instead of filing workers' comp?",
+          "a": "In most states, workers' comp is the exclusive remedy against your employer, meaning you generally can't also sue them for negligence. Exceptions exist for intentional harm or third-party liability (e.g., a defective machine made by another company)."
+        },
+        {
+          "q": "Does workers' comp cover pain and suffering?",
+          "a": "Generally no. Workers' comp covers medical treatment and a portion of lost wages, plus disability payments, but not pain and suffering the way a personal injury lawsuit would."
+        },
+        {
+          "q": "How is a workers' comp settlement calculated?",
+          "a": "It's typically based on your average weekly wage, the state's compensation rate (often around two-thirds of wages), and your disability rating (percentage of impairment) as determined by a medical evaluation."
+        }
       ],
       "sources": [
-        { "name": "U.S. Department of Labor — Workers' Compensation", "url": "https://www.dol.gov/general/topic/workcomp" },
-        { "name": "Nolo — Workers' Comp Settlements", "url": "https://www.nolo.com/legal-encyclopedia/workers-compensation-settlements" }
+        {
+          "name": "U.S. Department of Labor — Workers' Compensation",
+          "url": "https://www.dol.gov/general/topic/workcomp"
+        },
+        {
+          "name": "Nolo — Workers' Comp Settlements",
+          "url": "https://www.nolo.com/legal-encyclopedia/workers-compensation-settlements"
+        }
       ]
     },
     {
@@ -71,13 +131,28 @@
       "h1": "Dog Bite Settlement Calculator",
       "intro": "Dog bite claims usually settle through the owner's homeowners or renters insurance. Severity (puncture wounds, scarring, nerve damage, infection risk) drives the pain-and-suffering multiplier more than in most other injury types because bites often leave visible, permanent marks.",
       "faq": [
-        { "q": "Is the dog owner automatically liable for a bite?", "a": "It depends on the state. Many states have strict liability laws holding owners responsible regardless of the dog's prior behavior; others follow a 'one bite rule' requiring proof the owner knew the dog was dangerous." },
-        { "q": "Does scarring increase a dog bite settlement?", "a": "Yes, significantly. Visible or permanent scarring, especially on the face or hands, typically pushes the pain-and-suffering multiplier toward the higher end of the range." },
-        { "q": "What if the dog owner has no insurance?", "a": "You may need to pursue the owner's personal assets directly, or in some cases file a claim under your own umbrella or renters/homeowners policy if applicable." }
+        {
+          "q": "Is the dog owner automatically liable for a bite?",
+          "a": "It depends on the state. Many states have strict liability laws holding owners responsible regardless of the dog's prior behavior; others follow a 'one bite rule' requiring proof the owner knew the dog was dangerous."
+        },
+        {
+          "q": "Does scarring increase a dog bite settlement?",
+          "a": "Yes, significantly. Visible or permanent scarring, especially on the face or hands, typically pushes the pain-and-suffering multiplier toward the higher end of the range."
+        },
+        {
+          "q": "What if the dog owner has no insurance?",
+          "a": "You may need to pursue the owner's personal assets directly, or in some cases file a claim under your own umbrella or renters/homeowners policy if applicable."
+        }
       ],
       "sources": [
-        { "name": "CDC — Dog Bite Prevention", "url": "https://www.cdc.gov/dog-bites/index.html" },
-        { "name": "Nolo — Dog Bite Injury Claims", "url": "https://www.nolo.com/legal-encyclopedia/dog-bite-injury-claims" }
+        {
+          "name": "CDC — Dog Bite Prevention",
+          "url": "https://www.cdc.gov/dog-bites/index.html"
+        },
+        {
+          "name": "Nolo — Dog Bite Injury Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/dog-bite-injury-claims"
+        }
       ]
     },
     {
@@ -87,13 +162,28 @@
       "h1": "Medical Malpractice Settlement Calculator",
       "intro": "Medical malpractice claims require proving a provider deviated from the accepted standard of care and that deviation caused harm — a higher bar than ordinary negligence. Many states also cap non-economic (pain and suffering) damages in malpractice cases specifically, which this calculator accounts for as a note, not a hard limit, since caps vary by state and are frequently litigated.",
       "faq": [
-        { "q": "Are there caps on medical malpractice settlements?", "a": "Many states cap non-economic damages in malpractice cases specifically (commonly $250,000–$500,000, though amounts and rules vary widely and some states have no cap or have had caps struck down as unconstitutional). Economic damages like medical costs and lost wages are typically uncapped." },
-        { "q": "How long do I have to file a medical malpractice claim?", "a": "Statutes of limitations for malpractice are often shorter than for other injury claims and may start from when the harm was discovered rather than when it occurred — check your state's specific rule." },
-        { "q": "Do I need an expert witness for a malpractice claim?", "a": "Almost always. Most states require an affidavit or certificate of merit from a qualified medical expert just to file the claim, and expert testimony to prove the standard of care was breached." }
+        {
+          "q": "Are there caps on medical malpractice settlements?",
+          "a": "Many states cap non-economic damages in malpractice cases specifically (commonly $250,000–$500,000, though amounts and rules vary widely and some states have no cap or have had caps struck down as unconstitutional). Economic damages like medical costs and lost wages are typically uncapped."
+        },
+        {
+          "q": "How long do I have to file a medical malpractice claim?",
+          "a": "Statutes of limitations for malpractice are often shorter than for other injury claims and may start from when the harm was discovered rather than when it occurred — check your state's specific rule."
+        },
+        {
+          "q": "Do I need an expert witness for a malpractice claim?",
+          "a": "Almost always. Most states require an affidavit or certificate of merit from a qualified medical expert just to file the claim, and expert testimony to prove the standard of care was breached."
+        }
       ],
       "sources": [
-        { "name": "National Conference of State Legislatures — Medical Liability", "url": "https://www.ncsl.org" },
-        { "name": "Nolo — Medical Malpractice Claims", "url": "https://www.nolo.com/legal-encyclopedia/medical-malpractice" }
+        {
+          "name": "National Conference of State Legislatures — Medical Liability",
+          "url": "https://www.ncsl.org"
+        },
+        {
+          "name": "Nolo — Medical Malpractice Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/medical-malpractice"
+        }
       ]
     },
     {
@@ -103,13 +193,28 @@
       "h1": "Wrongful Death Settlement Calculator",
       "intro": "Wrongful death claims are brought by surviving family members or an estate representative, and damages typically include the deceased's lost future earnings, funeral and burial costs, and the family's loss of companionship, guidance, and support — categories this calculator estimates separately before combining them.",
       "faq": [
-        { "q": "Who can file a wrongful death claim?", "a": "It varies by state, but typically a surviving spouse, children, or parents, or the personal representative of the deceased's estate on behalf of those beneficiaries." },
-        { "q": "How is lost future income calculated in a wrongful death case?", "a": "Based on the deceased's earning history, age, expected working years remaining, and benefits — often with input from an economist for larger claims." },
-        { "q": "Is a wrongful death settlement taxable?", "a": "Compensation for physical injury or death is generally excluded from federal taxable income, though punitive damages and interest on the settlement are typically taxable." }
+        {
+          "q": "Who can file a wrongful death claim?",
+          "a": "It varies by state, but typically a surviving spouse, children, or parents, or the personal representative of the deceased's estate on behalf of those beneficiaries."
+        },
+        {
+          "q": "How is lost future income calculated in a wrongful death case?",
+          "a": "Based on the deceased's earning history, age, expected working years remaining, and benefits — often with input from an economist for larger claims."
+        },
+        {
+          "q": "Is a wrongful death settlement taxable?",
+          "a": "Compensation for physical injury or death is generally excluded from federal taxable income, though punitive damages and interest on the settlement are typically taxable."
+        }
       ],
       "sources": [
-        { "name": "Justia — Wrongful Death Claims", "url": "https://www.justia.com/injury/wrongful-death/" },
-        { "name": "IRS — Publication 4345, Settlements", "url": "https://www.irs.gov/pub/irs-pdf/p4345.pdf" }
+        {
+          "name": "Justia — Wrongful Death Claims",
+          "url": "https://www.justia.com/injury/wrongful-death/"
+        },
+        {
+          "name": "IRS — Publication 4345, Settlements",
+          "url": "https://www.irs.gov/pub/irs-pdf/p4345.pdf"
+        }
       ]
     },
     {
@@ -119,13 +224,28 @@
       "h1": "Whiplash Settlement Calculator",
       "intro": "Whiplash is one of the most disputed injury types in claims because it's a soft-tissue injury without a visible fracture — insurers often push back harder here than on injuries confirmed by imaging. Consistent medical treatment and documentation matter more for whiplash claims than almost any other injury type.",
       "faq": [
-        { "q": "Why do insurers dispute whiplash claims so often?", "a": "Because whiplash is a soft-tissue injury that doesn't always show up on X-rays or MRIs, insurers sometimes argue it's minor or pre-existing. Consistent, well-documented treatment is the main counter." },
-        { "q": "How long does whiplash take to settle?", "a": "It's best to wait until you reach 'maximum medical improvement' (your condition has stabilized) before settling, since settling too early can leave future treatment costs uncompensated." },
-        { "q": "Does a gap in treatment hurt my whiplash claim?", "a": "Yes — gaps in treatment are one of the most common reasons insurers reduce whiplash settlement offers, since they suggest the injury wasn't serious enough to need ongoing care." }
+        {
+          "q": "Why do insurers dispute whiplash claims so often?",
+          "a": "Because whiplash is a soft-tissue injury that doesn't always show up on X-rays or MRIs, insurers sometimes argue it's minor or pre-existing. Consistent, well-documented treatment is the main counter."
+        },
+        {
+          "q": "How long does whiplash take to settle?",
+          "a": "It's best to wait until you reach 'maximum medical improvement' (your condition has stabilized) before settling, since settling too early can leave future treatment costs uncompensated."
+        },
+        {
+          "q": "Does a gap in treatment hurt my whiplash claim?",
+          "a": "Yes — gaps in treatment are one of the most common reasons insurers reduce whiplash settlement offers, since they suggest the injury wasn't serious enough to need ongoing care."
+        }
       ],
       "sources": [
-        { "name": "Mayo Clinic — Whiplash Symptoms and Causes", "url": "https://www.mayoclinic.org/diseases-conditions/whiplash/symptoms-causes/syc-20378921" },
-        { "name": "Nolo — Whiplash Injury Claims", "url": "https://www.nolo.com/legal-encyclopedia/whiplash-injury-claims" }
+        {
+          "name": "Mayo Clinic — Whiplash Symptoms and Causes",
+          "url": "https://www.mayoclinic.org/diseases-conditions/whiplash/symptoms-causes/syc-20378921"
+        },
+        {
+          "name": "Nolo — Whiplash Injury Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/whiplash-injury-claims"
+        }
       ]
     },
     {
@@ -135,13 +255,28 @@
       "h1": "Slip and Fall Settlement Calculator",
       "intro": "Slip and fall claims fall under premises liability law, meaning you generally must show the property owner knew or should have known about a hazardous condition and failed to fix it or warn you. That negligence question often affects settlement value as much as the injury itself.",
       "faq": [
-        { "q": "Do I have to prove the property owner was negligent?", "a": "Yes, generally. Unlike some claim types, premises liability usually requires showing the owner knew or should have known about the hazard and had a reasonable opportunity to address it." },
-        { "q": "Does comparative negligence apply to slip and fall claims?", "a": "Yes. If you were distracted, ignored a warning sign, or wearing inappropriate footwear, your settlement can be reduced by your percentage of fault, depending on your state's rule." },
-        { "q": "What evidence helps a slip and fall claim?", "a": "Photos of the hazard taken promptly, incident reports, surveillance footage, witness statements, and prompt medical treatment all strengthen a claim." }
+        {
+          "q": "Do I have to prove the property owner was negligent?",
+          "a": "Yes, generally. Unlike some claim types, premises liability usually requires showing the owner knew or should have known about the hazard and had a reasonable opportunity to address it."
+        },
+        {
+          "q": "Does comparative negligence apply to slip and fall claims?",
+          "a": "Yes. If you were distracted, ignored a warning sign, or wearing inappropriate footwear, your settlement can be reduced by your percentage of fault, depending on your state's rule."
+        },
+        {
+          "q": "What evidence helps a slip and fall claim?",
+          "a": "Photos of the hazard taken promptly, incident reports, surveillance footage, witness statements, and prompt medical treatment all strengthen a claim."
+        }
       ],
       "sources": [
-        { "name": "OSHA — Slip, Trip, and Fall Prevention", "url": "https://www.osha.gov/slips-trips-falls" },
-        { "name": "Nolo — Slip and Fall Accident Claims", "url": "https://www.nolo.com/legal-encyclopedia/slip-fall-accident-claims" }
+        {
+          "name": "OSHA — Slip, Trip, and Fall Prevention",
+          "url": "https://www.osha.gov/slips-trips-falls"
+        },
+        {
+          "name": "Nolo — Slip and Fall Accident Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/slip-fall-accident-claims"
+        }
       ]
     },
     {
@@ -151,13 +286,28 @@
       "h1": "Lawsuit Settlement Calculator",
       "intro": "This general-purpose calculator applies the multiplier method used across most civil injury lawsuits, combining your documented economic losses with an estimated non-economic damages figure based on injury severity.",
       "faq": [
-        { "q": "What's the difference between a settlement and a judgment?", "a": "A settlement is a negotiated agreement, usually reached before or during trial, with no admission of fault required. A judgment is a court's formal ruling after trial, which can be appealed." },
-        { "q": "How long does a lawsuit take to settle?", "a": "Anywhere from a few months to several years, depending on injury severity, whether liability is disputed, and how many parties are involved." },
-        { "q": "Do most lawsuits settle before trial?", "a": "Yes — the large majority of civil lawsuits, including personal injury cases, settle before reaching trial." }
+        {
+          "q": "What's the difference between a settlement and a judgment?",
+          "a": "A settlement is a negotiated agreement, usually reached before or during trial, with no admission of fault required. A judgment is a court's formal ruling after trial, which can be appealed."
+        },
+        {
+          "q": "How long does a lawsuit take to settle?",
+          "a": "Anywhere from a few months to several years, depending on injury severity, whether liability is disputed, and how many parties are involved."
+        },
+        {
+          "q": "Do most lawsuits settle before trial?",
+          "a": "Yes — the large majority of civil lawsuits, including personal injury cases, settle before reaching trial."
+        }
       ],
       "sources": [
-        { "name": "U.S. Courts — Civil Cases", "url": "https://www.uscourts.gov/court-programs/federal-courts-and-you/types-cases/civil-cases" },
-        { "name": "Justia — Civil Litigation", "url": "https://www.justia.com" }
+        {
+          "name": "U.S. Courts — Civil Cases",
+          "url": "https://www.uscourts.gov/court-programs/federal-courts-and-you/types-cases/civil-cases"
+        },
+        {
+          "name": "Justia — Civil Litigation",
+          "url": "https://www.justia.com"
+        }
       ]
     },
     {
@@ -167,13 +317,28 @@
       "h1": "Motorcycle Accident Settlement Calculator",
       "intro": "Motorcycle accidents tend to produce more severe injuries than car accidents at comparable speeds, since riders lack the protection of a vehicle frame — a factor that typically pushes the pain-and-suffering multiplier toward the higher end. Bias against riders from insurers and juries is also a real, well-documented factor in these claims.",
       "faq": [
-        { "q": "Why are motorcycle accident settlements sometimes lower than expected?", "a": "Some insurers and juries hold unconscious bias against motorcyclists, assuming riders are more reckless — good documentation and, often, legal representation help counter this." },
-        { "q": "Does not wearing a helmet reduce my settlement?", "a": "In some states, yes — 'helmet laws' or comparative negligence rules can reduce compensation for head injuries if you weren't wearing a helmet, even where helmets aren't legally required." },
-        { "q": "What damages are typical in a motorcycle accident claim?", "a": "Medical bills, lost wages, motorcycle and gear repair/replacement, and pain and suffering — often weighted more heavily toward pain and suffering given injury severity." }
+        {
+          "q": "Why are motorcycle accident settlements sometimes lower than expected?",
+          "a": "Some insurers and juries hold unconscious bias against motorcyclists, assuming riders are more reckless — good documentation and, often, legal representation help counter this."
+        },
+        {
+          "q": "Does not wearing a helmet reduce my settlement?",
+          "a": "In some states, yes — 'helmet laws' or comparative negligence rules can reduce compensation for head injuries if you weren't wearing a helmet, even where helmets aren't legally required."
+        },
+        {
+          "q": "What damages are typical in a motorcycle accident claim?",
+          "a": "Medical bills, lost wages, motorcycle and gear repair/replacement, and pain and suffering — often weighted more heavily toward pain and suffering given injury severity."
+        }
       ],
       "sources": [
-        { "name": "NHTSA — Motorcycle Safety", "url": "https://www.nhtsa.gov/road-safety/motorcycles" },
-        { "name": "Nolo — Motorcycle Accident Claims", "url": "https://www.nolo.com/legal-encyclopedia/motorcycle-accidents" }
+        {
+          "name": "NHTSA — Motorcycle Safety",
+          "url": "https://www.nhtsa.gov/road-safety/motorcycles"
+        },
+        {
+          "name": "Nolo — Motorcycle Accident Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/motorcycle-accidents"
+        }
       ]
     },
     {
@@ -183,13 +348,28 @@
       "h1": "Truck Accident Settlement Calculator",
       "intro": "Commercial truck accidents differ from ordinary car accidents in two important ways: injuries tend to be more severe due to vehicle size and weight, and liability can extend beyond the driver to the trucking company, cargo loader, or maintenance contractor — often backed by much higher insurance policy limits.",
       "faq": [
-        { "q": "Who can be held liable in a truck accident?", "a": "Potentially the driver, the trucking company (for hiring, training, or maintenance failures), a cargo loading company, or a parts manufacturer — multiple defendants are common." },
-        { "q": "Do trucking companies have higher insurance limits?", "a": "Yes, federal regulations require commercial trucks to carry significantly higher minimum liability coverage than passenger vehicles, often $750,000 or more depending on cargo type." },
-        { "q": "Why do truck accident claims often take longer to resolve?", "a": "Multiple potentially liable parties, federal trucking regulations (hours-of-service logs, maintenance records), and higher stakes for insurers all tend to extend the investigation and negotiation timeline." }
+        {
+          "q": "Who can be held liable in a truck accident?",
+          "a": "Potentially the driver, the trucking company (for hiring, training, or maintenance failures), a cargo loading company, or a parts manufacturer — multiple defendants are common."
+        },
+        {
+          "q": "Do trucking companies have higher insurance limits?",
+          "a": "Yes, federal regulations require commercial trucks to carry significantly higher minimum liability coverage than passenger vehicles, often $750,000 or more depending on cargo type."
+        },
+        {
+          "q": "Why do truck accident claims often take longer to resolve?",
+          "a": "Multiple potentially liable parties, federal trucking regulations (hours-of-service logs, maintenance records), and higher stakes for insurers all tend to extend the investigation and negotiation timeline."
+        }
       ],
       "sources": [
-        { "name": "FMCSA — Federal Motor Carrier Safety Administration", "url": "https://www.fmcsa.dot.gov" },
-        { "name": "Nolo — Truck Accident Claims", "url": "https://www.nolo.com/legal-encyclopedia/truck-accidents" }
+        {
+          "name": "FMCSA — Federal Motor Carrier Safety Administration",
+          "url": "https://www.fmcsa.dot.gov"
+        },
+        {
+          "name": "Nolo — Truck Accident Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/truck-accidents"
+        }
       ]
     }
   ],
@@ -200,7 +380,17 @@
       "metaDescription": "See average car accident settlement ranges by injury severity, and what actually moves the number up or down.",
       "h1": "Average Settlement for a Car Accident",
       "body": "There's no single 'average' car accident settlement that means much on its own — the range runs from a few thousand dollars for minor soft-tissue injuries to well into six or seven figures for catastrophic injuries. What moves the number: injury severity and permanence, total medical bills, lost income, clarity of fault, and available insurance policy limits. A settlement is capped by the at-fault driver's policy limit unless you have underinsured motorist coverage or other assets to pursue.",
-      "linksTo": "car-accident-settlement-calculator"
+      "linksTo": "car-accident-settlement-calculator",
+      "sources": [
+        {
+          "name": "Insurance Information Institute — Auto Insurance Basics",
+          "url": "https://www.iii.org/article/auto-insurance-basics"
+        },
+        {
+          "name": "Insure.com — Minimum Car Insurance Coverage Levels",
+          "url": "https://www.insure.com/car-insurance/minimum-coverage-levels.html"
+        }
+      ]
     },
     {
       "slug": "average-car-accident-settlement-amount",
@@ -208,7 +398,17 @@
       "metaDescription": "Typical car accident settlement amounts broken down by injury type, from minor to catastrophic.",
       "h1": "Average Car Accident Settlement Amount",
       "body": "Settlement amounts scale closely with injury severity and treatment duration. Minor soft-tissue injuries with a few weeks of treatment settle far lower than injuries requiring surgery, hospitalization, or ongoing care. Policy limits are the practical ceiling in most cases — a driver with only state-minimum liability coverage caps what you can recover from them directly, regardless of how severe your injuries are.",
-      "linksTo": "car-accident-settlement-calculator"
+      "linksTo": "car-accident-settlement-calculator",
+      "sources": [
+        {
+          "name": "Insurance Information Institute — Auto Insurance Basics",
+          "url": "https://www.iii.org/article/auto-insurance-basics"
+        },
+        {
+          "name": "Insure.com — Minimum Car Insurance Coverage Levels",
+          "url": "https://www.insure.com/car-insurance/minimum-coverage-levels.html"
+        }
+      ]
     },
     {
       "slug": "average-pain-and-suffering-settlement",
@@ -216,7 +416,17 @@
       "metaDescription": "How pain and suffering settlements scale with injury severity, using the multiplier method.",
       "h1": "Average Pain and Suffering Settlement",
       "body": "Pain and suffering settlements are usually expressed as a multiplier of your economic damages (medical bills plus lost wages), typically 1.5x for minor injuries up to 5x for severe, permanent injuries. There's no fixed dollar 'average' that applies across injury types, since the multiplier is designed to scale with severity rather than produce a flat number.",
-      "linksTo": "pain-and-suffering-calculator"
+      "linksTo": "pain-and-suffering-calculator",
+      "sources": [
+        {
+          "name": "Insurance Information Institute — Auto Insurance Basics",
+          "url": "https://www.iii.org/article/auto-insurance-basics"
+        },
+        {
+          "name": "Nolo — Car Accident Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/car-accidents"
+        }
+      ]
     },
     {
       "slug": "average-settlement-for-slip-and-fall",
@@ -224,7 +434,17 @@
       "metaDescription": "Typical slip and fall settlement ranges, and why premises liability rules make these claims harder to predict.",
       "h1": "Average Settlement for a Slip and Fall Claim",
       "body": "Slip and fall settlements vary more than car accident settlements for a structural reason: you have to prove the property owner's negligence, not just that you were injured. A slip and fall with clear negligence (a known, unaddressed hazard) and serious injury can settle well; a similar injury with disputed negligence often settles for far less, or not at all.",
-      "linksTo": "slip-and-fall-settlement-calculator"
+      "linksTo": "slip-and-fall-settlement-calculator",
+      "sources": [
+        {
+          "name": "Nolo — What Is a Premises Liability Claim?",
+          "url": "https://www.nolo.com/legal-encyclopedia/what-premises-liability.html"
+        },
+        {
+          "name": "Nolo — How to Prove Liability in a Slip and Fall Case",
+          "url": "https://www.nolo.com/legal-encyclopedia/slip-fall-accidents-proving-fault-29845.html"
+        }
+      ]
     },
     {
       "slug": "average-dog-bite-settlement",
@@ -232,7 +452,13 @@
       "metaDescription": "Typical dog bite settlement ranges, and how scarring and permanent injury affect the payout.",
       "h1": "Average Dog Bite Settlement",
       "body": "Dog bite settlements skew higher than many injury types of comparable medical cost because of scarring and disfigurement, which juries and insurers weigh heavily in the pain-and-suffering multiplier — especially for facial or hand injuries. Most dog bite claims are paid through the owner's homeowners or renters insurance liability coverage.",
-      "linksTo": "dog-bite-settlement-calculator"
+      "linksTo": "dog-bite-settlement-calculator",
+      "sources": [
+        {
+          "name": "Triple-I (III) — Spotlight on Dog Bite Liability",
+          "url": "https://www.iii.org/article/spotlight-on-dog-bite-liability"
+        }
+      ]
     },
     {
       "slug": "average-medical-malpractice-settlement",
@@ -240,7 +466,13 @@
       "metaDescription": "Typical medical malpractice settlement ranges, and how state damage caps affect the total.",
       "h1": "Average Medical Malpractice Settlement",
       "body": "Medical malpractice settlements tend to run higher than most other injury claims because the underlying harm is often severe (surgical errors, misdiagnosis, birth injuries), but many states cap the non-economic (pain and suffering) portion specifically for malpractice cases, which can significantly reduce the total compared to what a similar injury would recover in a standard negligence claim.",
-      "linksTo": "medical-malpractice-settlement-calculator"
+      "linksTo": "medical-malpractice-settlement-calculator",
+      "sources": [
+        {
+          "name": "NCSL — Summary of Medical Liability / Medical Malpractice Laws",
+          "url": "https://www.ncsl.org/financial-services/medical-liability-medical-malpractice-laws"
+        }
+      ]
     },
     {
       "slug": "average-workers-comp-settlement",
@@ -248,7 +480,13 @@
       "metaDescription": "Typical workers' compensation settlement ranges, based on wage rate and disability percentage.",
       "h1": "Average Workers' Comp Settlement",
       "body": "Workers' comp settlements are calculated differently from injury lawsuits — there's no pain-and-suffering multiplier. Instead, the amount is driven mainly by your average weekly wage, your state's compensation rate, and your permanent disability rating as determined by a medical evaluation.",
-      "linksTo": "workers-comp-settlement-calculator"
+      "linksTo": "workers-comp-settlement-calculator",
+      "sources": [
+        {
+          "name": "AllLaw (Nolo network) — How Much Do Workers' Compensation Benefits Pay?",
+          "url": "https://www.alllaw.com/articles/nolo/workers-compensation/how-much-benefits.html"
+        }
+      ]
     },
     {
       "slug": "how-is-pain-and-suffering-calculated",
@@ -256,7 +494,17 @@
       "metaDescription": "The multiplier method and per diem method explained — how insurers and lawyers actually calculate pain and suffering.",
       "h1": "How Is Pain and Suffering Calculated?",
       "body": "Two methods dominate: the multiplier method (economic damages × a severity factor, usually 1.5-5) and the per diem method (a fixed dollar amount per day of recovery). The multiplier method is more common in practice, especially for insurance adjuster negotiations. Neither method is a legal requirement — both are negotiation tools, and actual settlements depend on the specific facts of the case.",
-      "linksTo": "pain-and-suffering-calculator"
+      "linksTo": "pain-and-suffering-calculator",
+      "sources": [
+        {
+          "name": "Insurance Information Institute — Auto Insurance Basics",
+          "url": "https://www.iii.org/article/auto-insurance-basics"
+        },
+        {
+          "name": "Nolo — Car Accident Claims",
+          "url": "https://www.nolo.com/legal-encyclopedia/car-accidents"
+        }
+      ]
     }
   ]
 }

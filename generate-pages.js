@@ -222,6 +222,13 @@ function renderInfoPage(entry) {
     <p>${entry.body}</p>
     ${linked ? `<p><a href="/${linked.slug}/">Use the ${linked.h1} &rarr;</a></p>` : ''}
   </section>
+
+  <section class="content-section">
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      ${entry.sources.map(s => `<li><a href="${s.url}" rel="nofollow noopener" target="_blank">${s.name}</a></li>`).join('\n      ')}
+    </ul>
+  </section>
 </div>`;
 
   const jsonLd = {
