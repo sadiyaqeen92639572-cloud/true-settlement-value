@@ -213,6 +213,10 @@ function initSettlementCalculator(formId, resultId, moneyPageSlug) {
       resultBlock.querySelector('.result-cap-unresolved-row').hidden = false;
       resultBlock.querySelector('.result-cap-note').textContent =
         result.state + ' has a damage cap that changes over time and could not be auto-resolved here — check the current figure with a local attorney.';
+    } else if (result.cap && result.cap.unavailable && result.cap.reason === 'struck-down') {
+      resultBlock.querySelector('.result-cap-unresolved-row').hidden = false;
+      resultBlock.querySelector('.result-cap-note').textContent =
+        result.state + '\'s damage cap for this claim type has been struck down by the courts and is not currently applied — this could change if it is reinstated on appeal.';
     }
 
     if (result.faultReduction > 0) {

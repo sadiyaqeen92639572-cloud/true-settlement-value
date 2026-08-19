@@ -22,6 +22,10 @@ const ORG = {
 
 // ---------- shared layout ----------
 
+// Set after the domain is added as a Search Console property (Settings → Ownership
+// verification → HTML tag) — leave null until then, do not fabricate a value.
+const GSC_VERIFICATION_TAG = null;
+
 function head({ title, description, canonicalPath, jsonLd }) {
   return `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,11 +34,15 @@ function head({ title, description, canonicalPath, jsonLd }) {
 <link rel="canonical" href="${DOMAIN}${canonicalPath}">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="/assets/styles.css">
-<meta property="og:title" content="${title}">
+${GSC_VERIFICATION_TAG ? `<meta name="google-site-verification" content="${GSC_VERIFICATION_TAG}">\n` : ''}<meta property="og:title" content="${title}">
 <meta property="og:description" content="${description}">
 <meta property="og:url" content="${DOMAIN}${canonicalPath}">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${DOMAIN}/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${DOMAIN}/assets/og-image.png">
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}`;
 }
 
@@ -136,6 +144,7 @@ function moneyPageJsonLd(entry, canonicalPath) {
 
 function renderMoneyPage(entry) {
   const canonicalPath = `/${entry.slug}/`;
+  const relatedGuides = DATA.infoPages.filter(i => i.linksTo === entry.slug);
   const bodyHtml = `<section class="hero">
   <div class="container">
     <h1>${entry.h1}</h1>
@@ -206,6 +215,13 @@ function renderMoneyPage(entry) {
     <h2>Frequently Asked Questions</h2>
     ${entry.faq.map(item => `<div class="faq-item"><h3>${item.q}</h3><p>${item.a}</p></div>`).join('\n    ')}
   </section>
+
+  ${relatedGuides.length ? `<section class="content-section">
+    <h2>Related Guides</h2>
+    <ul class="sources-list">
+      ${relatedGuides.map(g => `<li><a href="/${g.slug}/">${g.h1}</a></li>`).join('\n      ')}
+    </ul>
+  </section>` : ''}
 
   <section class="content-section">
     <h2>Sources</h2>
