@@ -64,9 +64,9 @@
         <input type="number" id="faultPercent" name="faultPercent" min="0" max="100" step="1" value="0">
       </div>
       <div>
-        <label for="state">State (affects fault rule)</label>
+        <label for="state">State (optional — enables state-specific fault rules and caps)</label>
         <select id="state" name="state">
-          <option value="">Select your state (optional)</option>
+          <option value="">Select a state (optional)</option>
           <option value="Alabama">Alabama</option>
           <option value="Alaska">Alaska</option>
           <option value="Arizona">Arizona</option>
@@ -119,8 +119,6 @@
           <option value="Wisconsin">Wisconsin</option>
           <option value="Wyoming">Wyoming</option>
         </select>
-        <p class="field-hint">Some states bar recovery entirely above a fault threshold, or with any
-        fault at all. Selecting your state applies the correct rule instead of a flat reduction.</p>
       </div>
       <label class="consent-row">
         <input type="checkbox" required>
@@ -144,13 +142,12 @@
     multiplier based on injury severity (1.5x for minor, 3x for moderate, 5x for severe), minus
     any reduction for your percentage of fault. It's the same starting-point approach insurance
     adjusters commonly use in negotiations — not a guaranteed outcome.</p>
-    <p>Fault reduction depends on your state's rule, not a flat percentage everywhere. Most states
-    use modified comparative negligence (you lose the right to recover once your fault reaches
-    50% or crosses 50%, depending on the state). A handful of pure comparative states (including
-    California and New York) reduce your award by your fault percentage with no cutoff, even at
-    high fault. A small group of states — Alabama, Maryland, North Carolina, Virginia, and
-    Washington D.C. — use contributory negligence, where any fault on your part, even 1%, bars
-    recovery entirely. Select your state above to apply the correct rule.</p>
+    <p>If you select a state, this tool applies that state's actual comparative/contributory
+    negligence rule and, where researched, its noneconomic-damages cap for this claim type — see
+    the <a href="/methodology/">methodology page</a> for exactly which states and rules are
+    currently covered. If your state's rule bars recovery at your entered fault percentage, this
+    tool shows an explanation instead of a dollar amount — that percentage is your own estimate,
+    not a legal finding, and several of these rules have real exceptions.</p>
   </section>
 
   <section class="content-section">
@@ -168,8 +165,9 @@
     </ul>
   </section>
 </div>
+<script src="/assets/state-data.js"></script>
 <script src="/assets/calc-engine.js"></script>
-<script>initSettlementCalculator('calc-form', 'calc-result');</script>
+<script>initSettlementCalculator('calc-form', 'calc-result', 'personal-injury-settlement-calculator');</script>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-links">

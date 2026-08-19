@@ -1,0 +1,187 @@
+{
+  "lastVerified": "2026-08-16",
+  "scopeNote": "This file covers a high-confidence, well-documented starting set (California, Texas, North Carolina, Florida, Georgia, Illinois) — NOT all ~30 states that have some form of damage cap. Remaining states are a disclosed follow-up research task, not silently omitted as if they don't exist. calc-engine.js must not assume a state has no cap just because it has no entry here — that distinction (researched-and-confirmed-no-cap vs. not-yet-researched) matters and isn't encoded in the data yet.",
+  "caps": [
+    {
+      "state": "California",
+      "appliesTo": "medical-malpractice",
+      "status": "in-force",
+      "effectiveYear": 2023,
+      "note": "MICRA cap, reformed by AB 35 (2022). Non-death med-mal noneconomic damages: started $350,000 in 2023, rises $40,000/year through 2033 (cap reaches $750,000), then +2%/year thereafter. A separate, higher schedule applies to wrongful-death med-mal claims — see the California / wrongful-death entry below. Resolve the current year's figure from the schedule at runtime, never bake a single number in at build time.",
+      "schedule": {
+        "noneconomic-cap-by-year": {
+          "2023": 350000,
+          "2024": 390000,
+          "2025": 430000,
+          "2026": 470000,
+          "2027": 510000,
+          "2028": 550000,
+          "2029": 590000,
+          "2030": 630000,
+          "2031": 670000,
+          "2032": 710000,
+          "2033": 750000
+        },
+        "afterFinalYear": "increases 2% annually starting 2034, compounding on the 2033 value"
+      },
+      "lastVerified": "2026-08-16",
+      "sources": [
+        {
+          "name": "Nolo — California's MICRA Cap in 2026",
+          "url": "https://www.nolo.com/legal-encyclopedia/how-does-the-micra-damage-cap-affect-california-medical-malpractice-case.html"
+        },
+        {
+          "name": "American Medical Association — State Medical Liability Reform Chart",
+          "url": "https://www.ama-assn.org/system/files/mlr-state-laws-chart-I.pdf"
+        }
+      ]
+    },
+    {
+      "state": "California",
+      "appliesTo": "wrongful-death",
+      "status": "in-force",
+      "effectiveYear": 2023,
+      "note": "MICRA cap for medical-malpractice wrongful-death claims specifically, reformed by AB 35 (2022) — a separate, higher schedule than the non-death med-mal cap. Started $500,000 in 2023, rises $50,000/year through 2033 (cap reaches $1,000,000), then +2%/year thereafter.",
+      "schedule": {
+        "noneconomic-cap-by-year": {
+          "2023": 500000,
+          "2024": 550000,
+          "2025": 600000,
+          "2026": 650000,
+          "2027": 700000,
+          "2028": 750000,
+          "2029": 800000,
+          "2030": 850000,
+          "2031": 900000,
+          "2032": 950000,
+          "2033": 1000000
+        },
+        "afterFinalYear": "increases 2% annually starting 2034, compounding on the 2033 value"
+      },
+      "lastVerified": "2026-08-16",
+      "sources": [
+        {
+          "name": "Nolo — California's MICRA Cap in 2026",
+          "url": "https://www.nolo.com/legal-encyclopedia/how-does-the-micra-damage-cap-affect-california-medical-malpractice-case.html"
+        },
+        {
+          "name": "American Medical Association — State Medical Liability Reform Chart",
+          "url": "https://www.ama-assn.org/system/files/mlr-state-laws-chart-I.pdf"
+        }
+      ]
+    },
+    {
+      "state": "Texas",
+      "appliesTo": "medical-malpractice",
+      "status": "in-force",
+      "effectiveYear": 2003,
+      "capAmount": 250000,
+      "note": "Flat $250,000 noneconomic-damages cap per claimant against an individual provider, from the 2003 Medical Malpractice and Tort Reform Act (HB 4). NOT indexed for inflation — unlike Texas's separate wrongful-death/survival cap (see that entry), this figure has not changed since 2003.",
+      "lastVerified": "2026-08-16",
+      "sources": [
+        {
+          "name": "Texas Civil Practice & Remedies Code § 74.301 (via enjuris.com summary)",
+          "url": "https://www.enjuris.com/texas/damage-caps/"
+        },
+        {
+          "name": "American Medical Association — State Medical Liability Reform Chart",
+          "url": "https://www.ama-assn.org/system/files/mlr-state-laws-chart-I.pdf"
+        }
+      ]
+    },
+    {
+      "state": "Texas",
+      "appliesTo": "wrongful-death",
+      "status": "in-force",
+      "effectiveYear": 1977,
+      "note": "Separate cap under Texas Civil Practice & Remedies Code § 74.303 for wrongful-death/survival med-mal claims. Base figure ($500,000 in 1977 dollars) IS indexed to the U.S. Consumer Price Index and adjusted periodically — currently over $2,000,000. Resolve the current indexed figure at runtime rather than hardcoding a value that will go stale.",
+      "schedule": {
+        "note": "CPI-indexed from a $500,000 (1977) base — exact current figure needs a fresh CPI-adjustment lookup at build/runtime, not hardcoded here"
+      },
+      "lastVerified": "2026-08-16",
+      "sources": [
+        {
+          "name": "Texas Bar Association — All-Damages Cap on Health Care Liability Wrongful Death",
+          "url": "https://www.texasbar.com/AM/Template.cfm?Section=articles&Template=%2FCM%2FHTMLDisplay.cfm&ContentID=34294"
+        },
+        {
+          "name": "American Medical Association — State Medical Liability Reform Chart",
+          "url": "https://www.ama-assn.org/system/files/mlr-state-laws-chart-I.pdf"
+        }
+      ]
+    },
+    {
+      "state": "North Carolina",
+      "appliesTo": "medical-malpractice",
+      "status": "in-force",
+      "effectiveYear": 2026,
+      "capAmount": 712847,
+      "note": "Noneconomic damages cap, originally $500,000 (2011), adjusted for inflation every 3 years per G.S. § 90-21.19 — most recent adjustment effective January 1, 2026 set it at $712,847. Does NOT apply where the provider's conduct was reckless/malicious/intentional/grossly negligent AND caused disfigurement, permanent injury, loss of body function, or death — those cases are uncapped. Next scheduled adjustment: January 1, 2029.",
+      "lastVerified": "2026-08-16",
+      "sources": [
+        {
+          "name": "NC Office of State Budget and Management — Liability Limit on Noneconomic Damages for Medical Malpractice",
+          "url": "https://www.osbm.nc.gov/facts-figures/economy/liability-limit-noneconomic-damages-medical-malpractice"
+        },
+        {
+          "name": "Nolo — North Carolina Medical Malpractice Damages Cap",
+          "url": "https://www.nolo.com/legal-encyclopedia/does-north-carolina-limit-damages-medical-malpractice-case.html"
+        }
+      ]
+    },
+    {
+      "state": "Florida",
+      "appliesTo": "medical-malpractice",
+      "status": "struck-down",
+      "effectiveYear": 2017,
+      "note": "Florida's tiered noneconomic-damages caps for medical malpractice were struck down by the Florida Supreme Court in North Broward Hospital District v. Kalitan (2017) on equal-protection grounds. No cap currently applies to Florida med-mal noneconomic damages — this entry exists so the page can state that accurately (a cap existed, it no longer applies), not to silently omit the topic.",
+      "lastVerified": "2026-08-16",
+      "sources": [
+        {
+          "name": "LegalMatch — Constitutionality of Medical Malpractice Damage Caps",
+          "url": "https://www.legalmatch.com/law-library/article/constitutionality-of-medical-malpractice-damage-caps.html"
+        },
+        {
+          "name": "American Tort Reform Association — Resources",
+          "url": "https://atra.org/resources/"
+        }
+      ]
+    },
+    {
+      "state": "Georgia",
+      "appliesTo": "medical-malpractice",
+      "status": "struck-down",
+      "effectiveYear": 2010,
+      "note": "Georgia's $350,000 noneconomic-damages cap was struck down by the Georgia Supreme Court in Atlanta Oculoplastic Surgery, P.C. v. Nestlehutt (2010) as violating the right to jury trial. No cap currently applies.",
+      "lastVerified": "2026-08-16",
+      "sources": [
+        {
+          "name": "LegalMatch — Constitutionality of Medical Malpractice Damage Caps",
+          "url": "https://www.legalmatch.com/law-library/article/constitutionality-of-medical-malpractice-damage-caps.html"
+        },
+        {
+          "name": "American Tort Reform Association — Resources",
+          "url": "https://atra.org/resources/"
+        }
+      ]
+    },
+    {
+      "state": "Illinois",
+      "appliesTo": "medical-malpractice",
+      "status": "struck-down",
+      "effectiveYear": 2010,
+      "note": "Illinois's caps ($500,000 for individual physicians, $1,000,000 for hospitals) were struck down by the Illinois Supreme Court in Lebron v. Gottlieb Memorial Hospital (Feb. 4, 2010) as violating separation of powers. No cap currently applies.",
+      "lastVerified": "2026-08-16",
+      "sources": [
+        {
+          "name": "Seyfarth Shaw — Illinois Supreme Court Strikes Down Pain-and-Suffering Caps",
+          "url": "https://www.seyfarth.com/news-insights/illinois-supreme-court-strikes-down-pain-and-suffering-caps-on-hospital-and-physician-malpractice-liability.html"
+        },
+        {
+          "name": "American Tort Reform Association — Resources",
+          "url": "https://atra.org/resources/"
+        }
+      ]
+    }
+  ]
+}
