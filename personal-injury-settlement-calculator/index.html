@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://truesettlementvalue.com/personal-injury-settlement-calculator/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Personal Injury Settlement Calculator — Free Estimate","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"dateModified":"2026-08-11","author":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"},"publisher":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What counts as economic damages in a personal injury claim?","acceptedAnswer":{"@type":"Answer","text":"Medical bills (past and future), lost wages, lost earning capacity, and property damage — losses with a specific dollar figure attached."}},{"@type":"Question","name":"What's the difference between economic and non-economic damages?","acceptedAnswer":{"@type":"Answer","text":"Economic damages have a receipt or pay stub behind them. Non-economic damages (pain and suffering, emotional distress, loss of enjoyment of life) don't — they're estimated using methods like the multiplier."}},{"@type":"Question","name":"Do I need a lawyer to negotiate a personal injury settlement?","acceptedAnswer":{"@type":"Answer","text":"Not always for minor claims, but insurers typically offer less to unrepresented claimants. For serious injuries or disputed liability, legal representation usually improves outcomes."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truesettlementvalue.com/"},{"@type":"ListItem","position":2,"name":"Personal Injury Settlement Calculator","item":"https://truesettlementvalue.com/personal-injury-settlement-calculator/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Personal Injury Settlement Calculator — Free Estimate","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"dateModified":"2026-08-19","author":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"},"publisher":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What counts as economic damages in a personal injury claim?","acceptedAnswer":{"@type":"Answer","text":"Medical bills (past and future), lost wages, lost earning capacity, and property damage — losses with a specific dollar figure attached."}},{"@type":"Question","name":"What's the difference between economic and non-economic damages?","acceptedAnswer":{"@type":"Answer","text":"Economic damages have a receipt or pay stub behind them. Non-economic damages (pain and suffering, emotional distress, loss of enjoyment of life) don't — they're estimated using methods like the multiplier."}},{"@type":"Question","name":"Do I need a lawyer to negotiate a personal injury settlement?","acceptedAnswer":{"@type":"Answer","text":"Not always for minor claims, but insurers typically offer less to unrepresented claimants. For serious injuries or disputed liability, legal representation usually improves outcomes."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truesettlementvalue.com/"},{"@type":"ListItem","position":2,"name":"Personal Injury Settlement Calculator","item":"https://truesettlementvalue.com/personal-injury-settlement-calculator/"}]}]}</script>
 </head>
 <body>
 <header class="site-header">
@@ -63,6 +63,65 @@
         <label for="faultPercent">Your percentage of fault, if any (%)</label>
         <input type="number" id="faultPercent" name="faultPercent" min="0" max="100" step="1" value="0">
       </div>
+      <div>
+        <label for="state">State (affects fault rule)</label>
+        <select id="state" name="state">
+          <option value="">Select your state (optional)</option>
+          <option value="Alabama">Alabama</option>
+          <option value="Alaska">Alaska</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Arkansas">Arkansas</option>
+          <option value="California">California</option>
+          <option value="Colorado">Colorado</option>
+          <option value="Connecticut">Connecticut</option>
+          <option value="Delaware">Delaware</option>
+          <option value="District of Columbia">District of Columbia</option>
+          <option value="Florida">Florida</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Idaho">Idaho</option>
+          <option value="Illinois">Illinois</option>
+          <option value="Indiana">Indiana</option>
+          <option value="Iowa">Iowa</option>
+          <option value="Kansas">Kansas</option>
+          <option value="Kentucky">Kentucky</option>
+          <option value="Louisiana">Louisiana</option>
+          <option value="Maine">Maine</option>
+          <option value="Maryland">Maryland</option>
+          <option value="Massachusetts">Massachusetts</option>
+          <option value="Michigan">Michigan</option>
+          <option value="Minnesota">Minnesota</option>
+          <option value="Mississippi">Mississippi</option>
+          <option value="Missouri">Missouri</option>
+          <option value="Montana">Montana</option>
+          <option value="Nebraska">Nebraska</option>
+          <option value="Nevada">Nevada</option>
+          <option value="New Hampshire">New Hampshire</option>
+          <option value="New Jersey">New Jersey</option>
+          <option value="New Mexico">New Mexico</option>
+          <option value="New York">New York</option>
+          <option value="North Carolina">North Carolina</option>
+          <option value="North Dakota">North Dakota</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Oklahoma">Oklahoma</option>
+          <option value="Oregon">Oregon</option>
+          <option value="Pennsylvania">Pennsylvania</option>
+          <option value="Rhode Island">Rhode Island</option>
+          <option value="South Carolina">South Carolina</option>
+          <option value="South Dakota">South Dakota</option>
+          <option value="Tennessee">Tennessee</option>
+          <option value="Texas">Texas</option>
+          <option value="Utah">Utah</option>
+          <option value="Vermont">Vermont</option>
+          <option value="Virginia">Virginia</option>
+          <option value="Washington">Washington</option>
+          <option value="West Virginia">West Virginia</option>
+          <option value="Wisconsin">Wisconsin</option>
+          <option value="Wyoming">Wyoming</option>
+        </select>
+        <p class="field-hint">Some states bar recovery entirely above a fault threshold, or with any
+        fault at all. Selecting your state applies the correct rule instead of a flat reduction.</p>
+      </div>
       <label class="consent-row">
         <input type="checkbox" required>
         <span>I understand this is an educational estimate only, not legal advice, and I've read
@@ -75,6 +134,7 @@
       <div class="result-row"><span>Economic damages</span><span class="result-economic"></span></div>
       <div class="result-row"><span>Pain &amp; suffering</span><span class="result-pain"></span></div>
       <div class="result-row result-fault-row" hidden><span>Fault reduction</span><span class="result-fault"></span></div>
+      <p class="result-barred-note" hidden></p>
     </div>
   </div>
 
@@ -84,6 +144,13 @@
     multiplier based on injury severity (1.5x for minor, 3x for moderate, 5x for severe), minus
     any reduction for your percentage of fault. It's the same starting-point approach insurance
     adjusters commonly use in negotiations — not a guaranteed outcome.</p>
+    <p>Fault reduction depends on your state's rule, not a flat percentage everywhere. Most states
+    use modified comparative negligence (you lose the right to recover once your fault reaches
+    50% or crosses 50%, depending on the state). A handful of pure comparative states (including
+    California and New York) reduce your award by your fault percentage with no cutoff, even at
+    high fault. A small group of states — Alabama, Maryland, North Carolina, Virginia, and
+    Washington D.C. — use contributory negligence, where any fault on your part, even 1%, bars
+    recovery entirely. Select your state above to apply the correct rule.</p>
   </section>
 
   <section class="content-section">

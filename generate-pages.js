@@ -8,6 +8,8 @@ const TODAY = new Date().toISOString().split('T')[0];
 
 const DATA = require('./data/calculators.json');
 const STATUTES = require('./data/statute-of-limitations.json');
+const NEGLIGENCE = require('./data/negligence-rules.json');
+const US_STATES = Object.keys(NEGLIGENCE.states);
 
 const ORG = {
   '@type': 'Organization',
@@ -160,6 +162,15 @@ function renderMoneyPage(entry) {
         <label for="faultPercent">Your percentage of fault, if any (%)</label>
         <input type="number" id="faultPercent" name="faultPercent" min="0" max="100" step="1" value="0">
       </div>
+      <div>
+        <label for="state">State (affects fault rule)</label>
+        <select id="state" name="state">
+          <option value="">Select your state (optional)</option>
+          ${US_STATES.map(s => `<option value="${s}">${s}</option>`).join('\n          ')}
+        </select>
+        <p class="field-hint">Some states bar recovery entirely above a fault threshold, or with any
+        fault at all. Selecting your state applies the correct rule instead of a flat reduction.</p>
+      </div>
       <label class="consent-row">
         <input type="checkbox" required>
         <span>I understand this is an educational estimate only, not legal advice, and I've read
@@ -172,6 +183,7 @@ function renderMoneyPage(entry) {
       <div class="result-row"><span>Economic damages</span><span class="result-economic"></span></div>
       <div class="result-row"><span>Pain &amp; suffering</span><span class="result-pain"></span></div>
       <div class="result-row result-fault-row" hidden><span>Fault reduction</span><span class="result-fault"></span></div>
+      <p class="result-barred-note" hidden></p>
     </div>
   </div>
 
@@ -181,6 +193,13 @@ function renderMoneyPage(entry) {
     multiplier based on injury severity (1.5x for minor, 3x for moderate, 5x for severe), minus
     any reduction for your percentage of fault. It's the same starting-point approach insurance
     adjusters commonly use in negotiations — not a guaranteed outcome.</p>
+    <p>Fault reduction depends on your state's rule, not a flat percentage everywhere. Most states
+    use modified comparative negligence (you lose the right to recover once your fault reaches
+    50% or crosses 50%, depending on the state). A handful of pure comparative states (including
+    California and New York) reduce your award by your fault percentage with no cutoff, even at
+    high fault. A small group of states — Alabama, Maryland, North Carolina, Virginia, and
+    Washington D.C. — use contributory negligence, where any fault on your part, even 1%, bars
+    recovery entirely. Select your state above to apply the correct rule.</p>
   </section>
 
   <section class="content-section">
