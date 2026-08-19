@@ -10,6 +10,7 @@ const DATA = require('./data/calculators.json');
 const STATUTES = require('./data/statute-of-limitations.json');
 const NEGLIGENCE = require('./data/negligence-rules.json');
 const US_STATES = Object.keys(NEGLIGENCE.states);
+const EEOC_CAPS = require('./data/eeoc-caps.json');
 
 const ORG = {
   '@type': 'Organization',
@@ -226,6 +227,121 @@ function renderMoneyPage(entry) {
   });
 }
 
+// ---------- eeoc money page (statutory-cap calculator, distinct from the injury multiplier engine) ----------
+
+function renderEeocMoneyPage(entry) {
+  const canonicalPath = `/${entry.slug}/`;
+  const lawTypeOptions = Object.entries(EEOC_CAPS.lawTypes)
+    .map(([value, cfg]) => `<option value="${value}"${value === 'title-vii' ? ' selected' : ''}>${cfg.label}</option>`)
+    .join('\n          ');
+  const capTable = EEOC_CAPS.titleViiAdaCaps
+    .map(t => `<tr><td>${t.minEmployees}–${t.maxEmployees ?? '+'}</td><td>${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(t.cap)}</td></tr>`)
+    .join('\n          ');
+
+  const bodyHtml = `<section class="hero">
+  <div class="container">
+    <h1>${entry.h1}</h1>
+    <p>${entry.intro}</p>
+  </div>
+</section>
+<div class="container">
+  <div class="calc-card">
+    <form id="eeoc-calc-form">
+      <div>
+        <label for="lawType">Which law applies to your claim?</label>
+        <select id="lawType" name="lawType">
+          ${lawTypeOptions}
+        </select>
+      </div>
+      <div>
+        <label for="backPay">Back pay owed ($)</label>
+        <input type="number" id="backPay" name="backPay" min="0" step="1" placeholder="e.g. 30000" required>
+      </div>
+      <div>
+        <label for="frontPay">Front pay, if any ($)</label>
+        <input type="number" id="frontPay" name="frontPay" min="0" step="1" value="0">
+      </div>
+      <div>
+        <label for="compensatoryRequested">Compensatory damages requested ($)</label>
+        <input type="number" id="compensatoryRequested" name="compensatoryRequested" min="0" step="1" value="0">
+        <p class="field-hint">Not used for ADEA claims — the ADEA has no compensatory damages.</p>
+      </div>
+      <div>
+        <label for="punitiveRequested">Punitive damages requested ($)</label>
+        <input type="number" id="punitiveRequested" name="punitiveRequested" min="0" step="1" value="0">
+        <p class="field-hint">Not used for ADEA claims, and excluded automatically against public employers.</p>
+      </div>
+      <div>
+        <label for="employeeCount">Employer's number of employees</label>
+        <input type="number" id="employeeCount" name="employeeCount" min="0" step="1" placeholder="e.g. 60">
+        <p class="field-hint">Determines the Title VII/ADA cap tier. Not used for ADEA or FEHA.</p>
+      </div>
+      <label class="consent-row">
+        <input type="checkbox" id="isPublicEmployer" name="isPublicEmployer">
+        <span>Employer is a government/public entity</span>
+      </label>
+      <label class="consent-row">
+        <input type="checkbox" id="willfulViolation" name="willfulViolation">
+        <span>Violation was willful (ADEA only — doubles back pay via liquidated damages)</span>
+      </label>
+      <label class="consent-row">
+        <input type="checkbox" required>
+        <span>I understand this is an educational estimate only, not legal advice, and I've read
+        the <a href="/privacy/">privacy policy</a>.</span>
+      </label>
+      <button type="submit" class="submit-btn">Calculate estimated settlement</button>
+    </form>
+    <div class="result-block" id="eeoc-calc-result" hidden>
+      <div class="result-total"></div>
+      <div class="result-row"><span>Back pay + front pay (uncapped)</span><span class="result-uncapped"></span></div>
+      <div class="result-row result-capped-row" hidden><span>Compensatory + punitive</span><span class="result-capped"></span></div>
+      <p class="result-cap-note" hidden></p>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <h2>How It's Calculated</h2>
+    <p>This tool splits your estimate into two buckets: an <strong>uncapped</strong> bucket (back pay
+    and front pay, never subject to any statutory cap) and a <strong>capped</strong> bucket
+    (compensatory + punitive damages, which the law limits depending on which statute applies and,
+    for Title VII/ADA claims, employer size). The two buckets are calculated separately and added
+    together — the cap never applies to the total.</p>
+    <div class="table-scroll" style="margin-top:12px">
+      <table class="data-table">
+        <thead><tr><th>Employees</th><th>Title VII / ADA cap (compensatory + punitive combined)</th></tr></thead>
+        <tbody>
+          ${capTable}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-light)">Caps fixed by the Civil Rights Act of 1991 —
+    never indexed for inflation. Source: 42 U.S.C. § 1981a.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    ${entry.faq.map(item => `<div class="faq-item"><h3>${item.q}</h3><p>${item.a}</p></div>`).join('\n    ')}
+  </section>
+
+  <section class="content-section">
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      ${entry.sources.map(s => `<li><a href="${s.url}" rel="nofollow noopener" target="_blank">${s.name}</a></li>`).join('\n      ')}
+    </ul>
+  </section>
+</div>
+<script src="/assets/eeoc-calc-engine.js"></script>
+<script>initEeocCalculator('eeoc-calc-form', 'eeoc-calc-result');</script>`;
+
+  return page({
+    title: entry.title,
+    description: entry.metaDescription,
+    canonicalPath,
+    jsonLd: moneyPageJsonLd(entry, canonicalPath),
+    bodyHtml
+  });
+}
+
 // ---------- info page ----------
 
 function renderInfoPage(entry) {
@@ -284,6 +400,15 @@ function renderHomepage() {
       ${DATA.moneyPages.map(m => `<a class="hub-card" href="/${m.slug}/"><h3>${m.h1}</h3><p>${m.metaDescription}</p></a>`).join('\n      ')}
     </div>
   </section>
+  ${(DATA.eeocMoneyPages || []).length ? `<section class="content-section">
+    <h2>Employment Discrimination Calculators</h2>
+    <p style="font-size:0.9rem;color:var(--text-light);margin-top:-6px">These use a different
+    method than the injury calculators above — statutory back pay/front pay plus damages caps,
+    not the multiplier method. See <a href="/methodology/">methodology</a>.</p>
+    <div class="hub-grid">
+      ${DATA.eeocMoneyPages.map(m => `<a class="hub-card" href="/${m.slug}/"><h3>${m.h1}</h3><p>${m.metaDescription}</p></a>`).join('\n      ')}
+    </div>
+  </section>` : ''}
   <section class="content-section">
     <h2>Guides</h2>
     <div class="hub-grid">
@@ -322,8 +447,8 @@ function renderMethodologyPage() {
 <div class="container">
   <section class="content-section">
     <p><strong>Reviewed by our editorial team.</strong> Last updated ${TODAY}.</p>
-    <h2>The multiplier method</h2>
-    <p>Every calculator on this site uses the multiplier method: (medical bills + lost wages)
+    <h2>The multiplier method (injury calculators)</h2>
+    <p>Every injury calculator on this site uses the multiplier method: (medical bills + lost wages)
     &times; a pain-and-suffering multiplier based on injury severity. This is a widely used
     negotiation starting point among insurance adjusters and personal injury attorneys — not a
     legal formula, and not a guarantee of any actual settlement.</p>
@@ -337,6 +462,13 @@ function renderMethodologyPage() {
         </tbody>
       </table>
     </div>
+    <h2>The statutory-cap method (EEOC / employment discrimination calculator)</h2>
+    <p>The EEOC settlement calculator does not use the multiplier method at all — it follows the
+    statutory structure of the applicable law instead. Back pay and front pay are calculated as
+    uncapped amounts; compensatory and punitive damages (where available) are capped by employer
+    size for Title VII/ADA claims, follow a back-pay-plus-liquidated-damages structure for ADEA
+    claims, and are uncapped for California FEHA claims. See the calculator page itself for the
+    full breakdown and legal sources.</p>
     <h2>What this tool does not do</h2>
     <p>It does not account for policy limits, disputed liability, jurisdiction-specific damage
     caps (e.g. medical malpractice caps, which vary by state), or the strength of your evidence
@@ -498,6 +630,7 @@ writePage('statute-of-limitations-by-state', renderStatutePage()); count++;
 
 DATA.moneyPages.forEach(entry => { writePage(entry.slug, renderMoneyPage(entry)); count++; });
 DATA.infoPages.forEach(entry => { writePage(entry.slug, renderInfoPage(entry)); count++; });
+(DATA.eeocMoneyPages || []).forEach(entry => { writePage(entry.slug, renderEeocMoneyPage(entry)); count++; });
 
 // robots.txt
 fs.writeFileSync(path.join(__dirname, 'robots.txt'),

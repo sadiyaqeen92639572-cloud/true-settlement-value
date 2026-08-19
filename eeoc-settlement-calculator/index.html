@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EEOC Settlement Calculator — Back Pay, Front Pay & Damages Caps</title>
+<meta name="description" content="Estimate an employment discrimination settlement: back pay, front pay, and compensatory/punitive damages under Title VII, ADA, ADEA, or California FEHA.">
+<link rel="canonical" href="https://truesettlementvalue.com/eeoc-settlement-calculator/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/assets/styles.css">
+<meta property="og:title" content="EEOC Settlement Calculator — Back Pay, Front Pay & Damages Caps">
+<meta property="og:description" content="Estimate an employment discrimination settlement: back pay, front pay, and compensatory/punitive damages under Title VII, ADA, ADEA, or California FEHA.">
+<meta property="og:url" content="https://truesettlementvalue.com/eeoc-settlement-calculator/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"EEOC Settlement Calculator — Back Pay, Front Pay & Damages Caps","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"dateModified":"2026-08-19","author":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"},"publisher":{"@type":"Organization","name":"True Settlement Value","url":"https://truesettlementvalue.com"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are EEOC settlement caps the same for every type of discrimination?","acceptedAnswer":{"@type":"Answer","text":"No. Title VII (race, sex, religion, national origin) and the ADA (disability) share the same compensatory + punitive damages caps under 42 U.S.C. § 1981a, from $50,000 to $300,000 depending on employer size. The ADEA (age discrimination) doesn't use these caps at all — it has no compensatory or punitive damages, only back pay and liquidated damages. California FEHA claims have no statutory cap."}},{"@type":"Question","name":"Does the settlement cap apply to back pay and front pay?","acceptedAnswer":{"@type":"Answer","text":"No. The § 1981a cap covers only compensatory (e.g. emotional distress) and punitive damages combined. Back pay is equitable relief under Title VII itself, and the Supreme Court held in Pollard v. E.I. du Pont (2001) that front pay is not part of the capped damages either — both are uncapped, on top of whatever the capped bucket totals."}},{"@type":"Question","name":"Can I get punitive damages against a government employer?","acceptedAnswer":{"@type":"Answer","text":"No. Punitive damages under 42 U.S.C. § 1981a are unavailable against public/government employers, regardless of employer size. Compensatory damages and back/front pay remain available."}},{"@type":"Question","name":"Have the EEOC damages caps ever been raised for inflation?","acceptedAnswer":{"@type":"Answer","text":"No. The caps were set in the Civil Rights Act of 1991 and have never been indexed for inflation — $300,000 in 1991 has roughly half the purchasing power today."}},{"@type":"Question","name":"What's different about age discrimination (ADEA) claims?","acceptedAnswer":{"@type":"Answer","text":"The ADEA doesn't provide compensatory or punitive damages at all. Instead, a plaintiff can recover back pay, front pay, and — if the violation was willful — liquidated damages equal to the back pay amount (effectively doubling it)."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://truesettlementvalue.com/"},{"@type":"ListItem","position":2,"name":"EEOC Settlement Calculator","item":"https://truesettlementvalue.com/eeoc-settlement-calculator/"}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">True Settlement Value</a>
+    <nav class="site-nav">
+      <a href="/#calculators">Calculators</a>
+      <a href="/statute-of-limitations-by-state/">Statutes</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+<div class="disclaimer-banner">
+  <div class="container">
+    True Settlement Value is not a law firm and does not provide legal advice. Calculator results are
+    educational estimates only, not a guarantee of any settlement value. Consult a licensed
+    attorney in your state before making legal decisions.
+  </div>
+</div>
+<section class="hero">
+  <div class="container">
+    <h1>EEOC Settlement Calculator</h1>
+    <p>Employment discrimination settlements don't use the injury multiplier method — they follow a statutory structure that depends on which law applies. Back pay and front pay are never capped. Compensatory and punitive damages under Title VII and the ADA are capped by employer size (42 U.S.C. § 1981a), fixed at 1991 levels. The ADEA (age discrimination) has no compensatory/punitive damages at all — it uses back pay plus liquidated damages for willful violations. California's FEHA has no cap on any damages. Select your law type below to apply the right formula.</p>
+  </div>
+</section>
+<div class="container">
+  <div class="calc-card">
+    <form id="eeoc-calc-form">
+      <div>
+        <label for="lawType">Which law applies to your claim?</label>
+        <select id="lawType" name="lawType">
+          <option value="title-vii" selected>Race, sex, religion, national origin (Title VII)</option>
+          <option value="ada">Disability (ADA)</option>
+          <option value="adea">Age 40+ (ADEA)</option>
+          <option value="feha-ca">California state claim (FEHA)</option>
+        </select>
+      </div>
+      <div>
+        <label for="backPay">Back pay owed ($)</label>
+        <input type="number" id="backPay" name="backPay" min="0" step="1" placeholder="e.g. 30000" required>
+      </div>
+      <div>
+        <label for="frontPay">Front pay, if any ($)</label>
+        <input type="number" id="frontPay" name="frontPay" min="0" step="1" value="0">
+      </div>
+      <div>
+        <label for="compensatoryRequested">Compensatory damages requested ($)</label>
+        <input type="number" id="compensatoryRequested" name="compensatoryRequested" min="0" step="1" value="0">
+        <p class="field-hint">Not used for ADEA claims — the ADEA has no compensatory damages.</p>
+      </div>
+      <div>
+        <label for="punitiveRequested">Punitive damages requested ($)</label>
+        <input type="number" id="punitiveRequested" name="punitiveRequested" min="0" step="1" value="0">
+        <p class="field-hint">Not used for ADEA claims, and excluded automatically against public employers.</p>
+      </div>
+      <div>
+        <label for="employeeCount">Employer's number of employees</label>
+        <input type="number" id="employeeCount" name="employeeCount" min="0" step="1" placeholder="e.g. 60">
+        <p class="field-hint">Determines the Title VII/ADA cap tier. Not used for ADEA or FEHA.</p>
+      </div>
+      <label class="consent-row">
+        <input type="checkbox" id="isPublicEmployer" name="isPublicEmployer">
+        <span>Employer is a government/public entity</span>
+      </label>
+      <label class="consent-row">
+        <input type="checkbox" id="willfulViolation" name="willfulViolation">
+        <span>Violation was willful (ADEA only — doubles back pay via liquidated damages)</span>
+      </label>
+      <label class="consent-row">
+        <input type="checkbox" required>
+        <span>I understand this is an educational estimate only, not legal advice, and I've read
+        the <a href="/privacy/">privacy policy</a>.</span>
+      </label>
+      <button type="submit" class="submit-btn">Calculate estimated settlement</button>
+    </form>
+    <div class="result-block" id="eeoc-calc-result" hidden>
+      <div class="result-total"></div>
+      <div class="result-row"><span>Back pay + front pay (uncapped)</span><span class="result-uncapped"></span></div>
+      <div class="result-row result-capped-row" hidden><span>Compensatory + punitive</span><span class="result-capped"></span></div>
+      <p class="result-cap-note" hidden></p>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <h2>How It's Calculated</h2>
+    <p>This tool splits your estimate into two buckets: an <strong>uncapped</strong> bucket (back pay
+    and front pay, never subject to any statutory cap) and a <strong>capped</strong> bucket
+    (compensatory + punitive damages, which the law limits depending on which statute applies and,
+    for Title VII/ADA claims, employer size). The two buckets are calculated separately and added
+    together — the cap never applies to the total.</p>
+    <div class="table-scroll" style="margin-top:12px">
+      <table class="data-table">
+        <thead><tr><th>Employees</th><th>Title VII / ADA cap (compensatory + punitive combined)</th></tr></thead>
+        <tbody>
+          <tr><td>15–100</td><td>$50,000</td></tr>
+          <tr><td>101–200</td><td>$100,000</td></tr>
+          <tr><td>201–500</td><td>$200,000</td></tr>
+          <tr><td>501–+</td><td>$300,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-light)">Caps fixed by the Civil Rights Act of 1991 —
+    never indexed for inflation. Source: 42 U.S.C. § 1981a.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><h3>Are EEOC settlement caps the same for every type of discrimination?</h3><p>No. Title VII (race, sex, religion, national origin) and the ADA (disability) share the same compensatory + punitive damages caps under 42 U.S.C. § 1981a, from $50,000 to $300,000 depending on employer size. The ADEA (age discrimination) doesn't use these caps at all — it has no compensatory or punitive damages, only back pay and liquidated damages. California FEHA claims have no statutory cap.</p></div>
+    <div class="faq-item"><h3>Does the settlement cap apply to back pay and front pay?</h3><p>No. The § 1981a cap covers only compensatory (e.g. emotional distress) and punitive damages combined. Back pay is equitable relief under Title VII itself, and the Supreme Court held in Pollard v. E.I. du Pont (2001) that front pay is not part of the capped damages either — both are uncapped, on top of whatever the capped bucket totals.</p></div>
+    <div class="faq-item"><h3>Can I get punitive damages against a government employer?</h3><p>No. Punitive damages under 42 U.S.C. § 1981a are unavailable against public/government employers, regardless of employer size. Compensatory damages and back/front pay remain available.</p></div>
+    <div class="faq-item"><h3>Have the EEOC damages caps ever been raised for inflation?</h3><p>No. The caps were set in the Civil Rights Act of 1991 and have never been indexed for inflation — $300,000 in 1991 has roughly half the purchasing power today.</p></div>
+    <div class="faq-item"><h3>What's different about age discrimination (ADEA) claims?</h3><p>The ADEA doesn't provide compensatory or punitive damages at all. Instead, a plaintiff can recover back pay, front pay, and — if the violation was willful — liquidated damages equal to the back pay amount (effectively doubling it).</p></div>
+  </section>
+
+  <section class="content-section">
+    <h2>Sources</h2>
+    <ul class="sources-list">
+      <li><a href="https://www.eeoc.gov/laws/guidance/enforcement-guidance-compensatory-and-punitive-damages-available-under-1991-civil" rel="nofollow noopener" target="_blank">EEOC — Notice 915.002, Compensatory and Punitive Damages</a></li>
+      <li><a href="https://www.law.cornell.edu/uscode/text/42/1981a" rel="nofollow noopener" target="_blank">42 U.S.C. § 1981a</a></li>
+      <li><a href="https://supreme.justia.com/cases/federal/us/532/843/" rel="nofollow noopener" target="_blank">Pollard v. E.I. du Pont de Nemours & Co., 532 U.S. 843 (2001)</a></li>
+    </ul>
+  </section>
+</div>
+<script src="/assets/eeoc-calc-engine.js"></script>
+<script>initEeocCalculator('eeoc-calc-form', 'eeoc-calc-result');</script>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/statute-of-limitations-by-state/">Statute of Limitations by State</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+    <p class="footer-disclaimer">
+      &copy; 2026 True Settlement Value. Estimates are for educational purposes only and do not
+      constitute legal advice or a guarantee of outcome. True Settlement Value is not a law firm and is
+      not affiliated with any court or government agency.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "note": "Title VII / ADA compensatory + punitive damages caps under 42 U.S.C. 1981a(b)(3), by employer size. These caps apply ONLY to compensatory (non-pecuniary, e.g. emotional distress) + punitive damages combined. Back pay and front pay are NOT subject to these caps — back pay is equitable relief under Title VII itself, and front pay was held uncapped by the Supreme Court in Pollard v. E.I. du Pont de Nemours & Co., 532 U.S. 843 (2001). Caps are fixed at 1991 levels and have never been indexed for inflation. Punitive damages are unavailable against public/government employers (42 U.S.C. 1981a(b)(1)). ADEA claims (age discrimination) use a wholly different remedy structure: back pay + liquidated damages (a doubling of back pay for willful violations) — no compensatory/punitive caps apply because none are available under the ADEA at all. California FEHA claims have NO statutory cap on compensatory or punitive damages.",
+  "lastVerified": "2026-08-19",
+  "sources": [
+    { "name": "EEOC — Notice 915.002, Compensatory and Punitive Damages Available", "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-compensatory-and-punitive-damages-available-under-1991-civil" },
+    { "name": "42 U.S.C. § 1981a", "url": "https://www.law.cornell.edu/uscode/text/42/1981a" },
+    { "name": "Pollard v. E.I. du Pont de Nemours & Co., 532 U.S. 843 (2001)", "url": "https://supreme.justia.com/cases/federal/us/532/843/" }
+  ],
+  "titleViiAdaCaps": [
+    { "minEmployees": 15, "maxEmployees": 100, "cap": 50000 },
+    { "minEmployees": 101, "maxEmployees": 200, "cap": 100000 },
+    { "minEmployees": 201, "maxEmployees": 500, "cap": 200000 },
+    { "minEmployees": 501, "maxEmployees": null, "cap": 300000 }
+  ],
+  "lawTypes": {
+    "title-vii": { "label": "Race, sex, religion, national origin (Title VII)", "regime": "capped", "punitiveAvailablePublicEmployer": false },
+    "ada": { "label": "Disability (ADA)", "regime": "capped", "punitiveAvailablePublicEmployer": false },
+    "adea": { "label": "Age 40+ (ADEA)", "regime": "adea", "punitiveAvailablePublicEmployer": false },
+    "feha-ca": { "label": "California state claim (FEHA)", "regime": "uncapped" }
+  }
+}

@@ -258,5 +258,26 @@
       "body": "Two methods dominate: the multiplier method (economic damages × a severity factor, usually 1.5-5) and the per diem method (a fixed dollar amount per day of recovery). The multiplier method is more common in practice, especially for insurance adjuster negotiations. Neither method is a legal requirement — both are negotiation tools, and actual settlements depend on the specific facts of the case.",
       "linksTo": "pain-and-suffering-calculator"
     }
+  ],
+  "eeocMoneyPages": [
+    {
+      "slug": "eeoc-settlement-calculator",
+      "title": "EEOC Settlement Calculator — Back Pay, Front Pay & Damages Caps",
+      "metaDescription": "Estimate an employment discrimination settlement: back pay, front pay, and compensatory/punitive damages under Title VII, ADA, ADEA, or California FEHA.",
+      "h1": "EEOC Settlement Calculator",
+      "intro": "Employment discrimination settlements don't use the injury multiplier method — they follow a statutory structure that depends on which law applies. Back pay and front pay are never capped. Compensatory and punitive damages under Title VII and the ADA are capped by employer size (42 U.S.C. § 1981a), fixed at 1991 levels. The ADEA (age discrimination) has no compensatory/punitive damages at all — it uses back pay plus liquidated damages for willful violations. California's FEHA has no cap on any damages. Select your law type below to apply the right formula.",
+      "faq": [
+        { "q": "Are EEOC settlement caps the same for every type of discrimination?", "a": "No. Title VII (race, sex, religion, national origin) and the ADA (disability) share the same compensatory + punitive damages caps under 42 U.S.C. § 1981a, from $50,000 to $300,000 depending on employer size. The ADEA (age discrimination) doesn't use these caps at all — it has no compensatory or punitive damages, only back pay and liquidated damages. California FEHA claims have no statutory cap." },
+        { "q": "Does the settlement cap apply to back pay and front pay?", "a": "No. The § 1981a cap covers only compensatory (e.g. emotional distress) and punitive damages combined. Back pay is equitable relief under Title VII itself, and the Supreme Court held in Pollard v. E.I. du Pont (2001) that front pay is not part of the capped damages either — both are uncapped, on top of whatever the capped bucket totals." },
+        { "q": "Can I get punitive damages against a government employer?", "a": "No. Punitive damages under 42 U.S.C. § 1981a are unavailable against public/government employers, regardless of employer size. Compensatory damages and back/front pay remain available." },
+        { "q": "Have the EEOC damages caps ever been raised for inflation?", "a": "No. The caps were set in the Civil Rights Act of 1991 and have never been indexed for inflation — $300,000 in 1991 has roughly half the purchasing power today." },
+        { "q": "What's different about age discrimination (ADEA) claims?", "a": "The ADEA doesn't provide compensatory or punitive damages at all. Instead, a plaintiff can recover back pay, front pay, and — if the violation was willful — liquidated damages equal to the back pay amount (effectively doubling it)." }
+      ],
+      "sources": [
+        { "name": "EEOC — Notice 915.002, Compensatory and Punitive Damages", "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-compensatory-and-punitive-damages-available-under-1991-civil" },
+        { "name": "42 U.S.C. § 1981a", "url": "https://www.law.cornell.edu/uscode/text/42/1981a" },
+        { "name": "Pollard v. E.I. du Pont de Nemours & Co., 532 U.S. 843 (2001)", "url": "https://supreme.justia.com/cases/federal/us/532/843/" }
+      ]
+    }
   ]
 }

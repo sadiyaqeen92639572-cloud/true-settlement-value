@@ -20,6 +20,10 @@ DATA.infoPages.forEach(i => {
   if (!fs.existsSync(path.join(__dirname, i.slug, 'index.html'))) return;
   urls.push({ loc: `${DOMAIN}/${i.slug}/`, changefreq: 'monthly', priority: '0.7' });
 });
+(DATA.eeocMoneyPages || []).forEach(m => {
+  if (!fs.existsSync(path.join(__dirname, m.slug, 'index.html'))) return;
+  urls.push({ loc: `${DOMAIN}/${m.slug}/`, changefreq: 'monthly', priority: '0.9' });
+});
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
