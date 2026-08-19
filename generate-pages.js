@@ -24,7 +24,7 @@ const ORG = {
 
 // Set after the domain is added as a Search Console property (Settings → Ownership
 // verification → HTML tag) — leave null until then, do not fabricate a value.
-const GSC_VERIFICATION_TAG = null;
+const GSC_VERIFICATION_TAG = 'gK7PZhKz3s3MS6fkQt6q3Iyad4WJib0BBXoOYCFiSCc';
 
 function head({ title, description, canonicalPath, jsonLd }) {
   return `<meta charset="UTF-8">
