@@ -509,6 +509,41 @@
   ],
   "eeocMoneyPages": [
     {
+      "slug": "discrimination-lawsuit-settlement-calculator",
+      "title": "Discrimination Lawsuit Settlement Calculator — Free Estimate",
+      "metaDescription": "Estimate how much you could sue for in a workplace discrimination lawsuit — back pay, front pay, and compensatory/punitive damages by claim type.",
+      "h1": "Discrimination Lawsuit Settlement Calculator",
+      "intro": "Workplace discrimination lawsuits — based on race, sex, age, disability, religion, or national origin — don't settle like an injury claim. There's no pain-and-suffering multiplier; instead, the law splits your recovery into an uncapped bucket (back pay, front pay) and, depending on which law applies to your claim, a capped bucket (compensatory and punitive damages). This calculator walks through both, using the same statutory structure as our more detailed EEOC settlement calculator — use this version for a quick estimate by claim type, or the EEOC calculator if you already know which federal or state law applies.",
+      "faq": [
+        {
+          "q": "How much can I sue for in a discrimination lawsuit?",
+          "a": "It depends entirely on which law applies. Back pay and front pay are never capped and depend on your actual lost earnings. Compensatory and punitive damages are capped by employer size under federal law (Title VII, ADA) at $50,000–$300,000 combined, uncapped under California's FEHA, and unavailable at all under the ADEA (age discrimination), which instead allows liquidated damages that can double your back pay if the violation was willful."
+        },
+        {
+          "q": "Does it matter if my discrimination claim is based on race, age, or disability?",
+          "a": "Yes — the applicable law changes the math. Race, sex, religion, and national origin claims fall under Title VII; disability claims under the ADA (same damages caps as Title VII); age claims under the ADEA (no compensatory/punitive damages, but liquidated damages for willful violations); and in California, FEHA covers all of the above with no damages cap at all."
+        },
+        {
+          "q": "What's a typical discrimination lawsuit settlement range?",
+          "a": "There's no single average — documented cases with clear lost wages and moderate emotional distress often settle in the tens of thousands to low hundreds of thousands; egregious, well-documented cases with strong evidence and no damages cap (e.g., under California FEHA) can exceed $1 million. The employer's size and which law applies drive most of the variation."
+        },
+        {
+          "q": "Do I need to file with the EEOC before suing?",
+          "a": "For federal claims (Title VII, ADA, ADEA), yes — you generally must file a charge with the EEOC (or a state fair employment agency) and receive a 'right to sue' letter before filing in court. California FEHA claims go through the state's Civil Rights Department instead."
+        }
+      ],
+      "sources": [
+        {
+          "name": "EEOC — Notice 915.002, Compensatory and Punitive Damages",
+          "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-compensatory-and-punitive-damages-available-under-1991-civil"
+        },
+        {
+          "name": "EEOC — Filing a Charge of Discrimination",
+          "url": "https://www.eeoc.gov/filing-charge-discrimination"
+        }
+      ]
+    },
+    {
       "slug": "eeoc-settlement-calculator",
       "title": "EEOC Settlement Calculator \u2014 Back Pay, Front Pay & Damages Caps",
       "metaDescription": "Estimate an employment discrimination settlement: back pay, front pay, and compensatory/punitive damages under Title VII, ADA, ADEA, or California FEHA.",

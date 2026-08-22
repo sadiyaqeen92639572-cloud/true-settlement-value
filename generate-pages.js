@@ -247,6 +247,7 @@ function renderMoneyPage(entry) {
 
 function renderEeocMoneyPage(entry) {
   const canonicalPath = `/${entry.slug}/`;
+  const otherEeocPages = (DATA.eeocMoneyPages || []).filter(e => e.slug !== entry.slug);
   const lawTypeOptions = Object.entries(EEOC_CAPS.lawTypes)
     .map(([value, cfg]) => `<option value="${value}"${value === 'title-vii' ? ' selected' : ''}>${cfg.label}</option>`)
     .join('\n          ');
@@ -338,6 +339,13 @@ function renderEeocMoneyPage(entry) {
     <h2>Frequently Asked Questions</h2>
     ${entry.faq.map(item => `<div class="faq-item"><h3>${item.q}</h3><p>${item.a}</p></div>`).join('\n    ')}
   </section>
+
+  ${otherEeocPages.length ? `<section class="content-section">
+    <h2>Related Calculators</h2>
+    <ul class="sources-list">
+      ${otherEeocPages.map(g => `<li><a href="/${g.slug}/">${g.h1}</a></li>`).join('\n      ')}
+    </ul>
+  </section>` : ''}
 
   <section class="content-section">
     <h2>Sources</h2>
